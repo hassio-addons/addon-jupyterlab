@@ -14,6 +14,8 @@
 
 [![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
 
+[![Support my work on Patreon][patreon-shield]][patreon]
+
 Create documents containing live code, equations, visualizations,
 and explanatory text.
 
@@ -43,25 +45,13 @@ comparison to installing any other Hass.io add-on.
 
 ## Docker status
 
-[![Docker Architecture][armhf-arch-shield]][armhf-dockerhub]
-[![Docker Version][armhf-version-shield]][armhf-microbadger]
-[![Docker Layers][armhf-layers-shield]][armhf-microbadger]
-[![Docker Pulls][armhf-pulls-shield]][armhf-dockerhub]
+![Supports armhf Architecture][armhf-shield]
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports i386 Architecture][i386-shield]
 
-[![Docker Architecture][aarch64-arch-shield]][aarch64-dockerhub]
-[![Docker Version][aarch64-version-shield]][aarch64-microbadger]
-[![Docker Layers][aarch64-layers-shield]][aarch64-microbadger]
-[![Docker Pulls][aarch64-pulls-shield]][aarch64-dockerhub]
-
-[![Docker Architecture][amd64-arch-shield]][amd64-dockerhub]
-[![Docker Version][amd64-version-shield]][amd64-microbadger]
-[![Docker Layers][amd64-layers-shield]][amd64-microbadger]
-[![Docker Pulls][amd64-pulls-shield]][amd64-dockerhub]
-
-[![Docker Architecture][i386-arch-shield]][i386-dockerhub]
-[![Docker Version][i386-version-shield]][i386-microbadger]
-[![Docker Layers][i386-layers-shield]][i386-microbadger]
-[![Docker Pulls][i386-pulls-shield]][i386-dockerhub]
+[![Docker Layers][layers-shield]][microbadger]
+[![Docker Pulls][pulls-shield]][dockerhub]
 
 ## Configuration
 
@@ -121,7 +111,7 @@ There is a chapter in this document with instruction on obtaining such a token.
 
 ### Option: `ssl`
 
-Enables/Disables SSL (HTTPS) on the web terminal. Set it `true` to enable it,
+Enables/Disables SSL (HTTPS) on the JupyterLab Set it `true` to enable it,
 `false` otherwise.
 
 ### Option: `certfile`
@@ -139,7 +129,7 @@ The private key file to use for SSL.
 ### Option: `system_packages`
 
 Allows you to specify additional [Alpine packages][alpine-packages] to be
-installed to your Jupyter setup (e.g., `g++`. `make`, `ffmpeg`).
+installed to your JupyterLab setup (e.g., `g++`. `make`, `ffmpeg`).
 
 **Note**: _Adding many packages will result in a longer start-up time
 for the add-on._
@@ -147,14 +137,14 @@ for the add-on._
 ### Option: `python_packages`
 
 Allows you to specify additional [Python packages][python-packages] to be
-installed to your Jupyter setup (e.g., `PyMySQL`. `Requests`, `Pillow`).
+installed to your JupyterLab setup (e.g., `PyMySQL`. `Requests`, `Pillow`).
 
 **Note**: _Adding many packages will result in a longer start-up time
 for the add-on._
 
 ## Embedding into Home Assistant
 
-It is possible to embed Jupyter directly into Home Assistant, allowing
+It is possible to embed JupyterLab directly into Home Assistant, allowing
 you to access the JupyterLab through the Home Assistant frontend.
 
 Home Assistant provides the `panel_iframe` component, for these purposes.
@@ -163,7 +153,7 @@ Example configuration:
 
 ```yaml
 panel_iframe:
-  jupyter:
+  jupyterlab:
     title: JupyterLab
     icon: mdi:flask
     url: https://addres.to.your.hass.io:8888
@@ -206,10 +196,11 @@ Got questions?
 
 You have several options to get them answered:
 
-- The Home Assistant [Community Forum][forum], we have a
-  [dedicated topic][forum] on that forum regarding this add-on.
-- The Home Assistant [Discord Chat Server][discord] for general Home Assistant
-  discussions and questions.
+- The [Community Hass.io Add-ons Discord chat server][discord] for add-on
+  support and feature requests.
+- The [Home Assistant Discord chat server][discord-ha] for general Home
+  Assistant discussions and questions.
+- The Home Assistant [Community Forum][forum].
 - Join the [Reddit subreddit][reddit] in [/r/homeassistant][reddit]
 
 You could also [open an issue here][issue] GitHub.
@@ -262,31 +253,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[aarch64-anchore-shield]: https://img.shields.io/badge/lorem-ipsum-red.svg
-[aarch64-anchore]: http://example.com
-[aarch64-arch-shield]: https://img.shields.io/badge/architecture-aarch64-blue.svg
-[aarch64-dockerhub]: https://hub.docker.com/r/hassioaddons/jupyterlablite-aarch64
-[aarch64-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/jupyterlablite-aarch64.svg
-[aarch64-microbadger]: https://microbadger.com/images/hassioaddons/jupyterlablite-aarch64
-[aarch64-pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/jupyterlablite-aarch64.svg
-[aarch64-version-shield]: https://images.microbadger.com/badges/version/hassioaddons/jupyterlablite-aarch64.svg
+[aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [alpine-packages]: https://pkgs.alpinelinux.org/packages
-[amd64-anchore-shield]: https://img.shields.io/badge/lorem-ipsum-red.svg
-[amd64-anchore]: https://anchore.io/image/dockerhub/hassioaddons%jupyterlablite-amd64%3Alatest
-[amd64-arch-shield]: https://img.shields.io/badge/architecture-amd64-blue.svg
-[amd64-dockerhub]: https://hub.docker.com/r/hassioaddons/jupyterlablite-amd64
-[amd64-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/jupyterlablite-amd64.svg
-[amd64-microbadger]: https://microbadger.com/images/hassioaddons/jupyterlablite-amd64
-[amd64-pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/jupyterlablite-amd64.svg
-[amd64-version-shield]: https://images.microbadger.com/badges/version/hassioaddons/jupyterlablite-amd64.svg
-[armhf-anchore-shield]: https://img.shields.io/badge/lorem-ipsum-red.svg
-[armhf-anchore]: https://anchore.io/image/dockerhub/hassioaddons%jupyterlablite-armhf%3Alatest
-[armhf-arch-shield]: https://img.shields.io/badge/architecture-armhf-blue.svg
-[armhf-dockerhub]: https://hub.docker.com/r/hassioaddons/jupyterlablite-armhf
-[armhf-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/jupyterlablite-armhf.svg
-[armhf-microbadger]: https://microbadger.com/images/hassioaddons/jupyterlablite-armhf
-[armhf-pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/jupyterlablite-armhf.svg
-[armhf-version-shield]: https://images.microbadger.com/badges/version/hassioaddons/jupyterlablite-armhf.svg
+[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
+[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [bountysource-shield]: https://img.shields.io/bountysource/team/hassio-addons/activity.svg
 [bountysource]: https://www.bountysource.com/teams/hassio-addons/issues
 [buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
@@ -294,8 +264,10 @@ SOFTWARE.
 [commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-jupyterlab-lite.svg
 [commits]: https://github.com/hassio-addons/addon-jupyterlab-lite/commits/master
 [contributors]: https://github.com/hassio-addons/addon-jupyterlab-lite/graphs/contributors
-[discord-shield]: https://img.shields.io/discord/330944238910963714.svg
-[discord]: https://discord.gg/c5DvZ4e
+[discord-ha]: https://discord.gg/c5DvZ4e
+[discord-shield]: https://img.shields.io/discord/478094546522079232.svg
+[discord]: https://discord.me/hassioaddons
+[dockerhub]: https://hub.docker.com/r/hassioaddons/jupyterlablite
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/?u=frenck
 [frenck]: https://github.com/frenck
@@ -303,19 +275,17 @@ SOFTWARE.
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-jupyterlab-lite/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-jupyterlab-lite/pipelines
 [home-assistant]: https://home-assistant.io
-[i386-anchore-shield]: https://img.shields.io/badge/lorem-ipsum-red.svg
-[i386-anchore]: https://anchore.io/image/dockerhub/hassioaddons%2Fjupyter-i386%3Alatest
-[i386-arch-shield]: https://img.shields.io/badge/architecture-i386-blue.svg
-[i386-dockerhub]: https://hub.docker.com/r/hassioaddons/jupyterlablite-i386
-[i386-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/jupyterlablite-i386.svg
-[i386-microbadger]: https://microbadger.com/images/hassioaddons/jupyterlablite-i386
-[i386-pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/jupyterlablite-i386.svg
-[i386-version-shield]: https://images.microbadger.com/badges/version/hassioaddons/jupyterlablite-i386.svg
+[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/hassio-addons/addon-jupyterlab-lite/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
+[layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/jupyterlablite.svg
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-jupyterlab-lite.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2018.svg
+[microbadger]: https://microbadger.com/images/hassioaddons/jupyterlablite
+[patreon-shield]: https://www.frenck.nl/images/patreon.png
+[patreon]: https://www.patreon.com/frenck
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-concept-red.svg
+[pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/jupyterlablite.svg
 [python-packages]: https://pypi.org/
 [reddit]: https://reddit.com/r/homeassistant
 [releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-jupyterlab-lite.svg
