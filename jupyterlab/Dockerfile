@@ -59,10 +59,6 @@ RUN \
     && jupyter labextension install jupyterlab_bokeh --no-build \
     && jupyter labextension install @jupyterlab/github --no-build \
     && jupyter labextension install @jupyterlab/git --no-build \
-    && jupyter labextension install plotlywidget@0.5.2 --no-build \
-    && jupyter labextension install \
-        @jupyterlab/plotly-extension@0.18.1 --no-build \
-    && jupyter labextension install jupyterlab-chart-editor@1.0 --no-build \
     && jupyter lab build \
     \
     && apt-get purge -y --auto-remove \

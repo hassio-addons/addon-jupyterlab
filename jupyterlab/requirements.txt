@@ -11,7 +11,6 @@ matplotlib==3.0.2
 nbconvert==5.4.0
 numpy==1.15.4
 pandas==0.23.4
-plotly==3.4.2
 PyMySQL==0.9.2
 python-dateutil==2.7.5
 scrapy==1.5.1
