@@ -29,7 +29,7 @@ RUN \
         libjpeg-turbo8-dev=1.5.2-0ubuntu5.18.04.1 \
         libpng-dev=1.6.34-1ubuntu0.18.04.1 \
         libpng16-16=1.6.34-1ubuntu0.18.04.1 \
-        libssl-dev=1.1.0g-2ubuntu4.1 \
+        libssl-dev=1.1.0g-2ubuntu4.3 \
         libtiff5-dev=4.0.9-5 \
         libxml2-dev=2.9.4+dfsg1-6.1ubuntu1.2 \
         libxml2=2.9.4+dfsg1-6.1ubuntu1.2 \
