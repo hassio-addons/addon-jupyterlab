@@ -28,6 +28,7 @@ RUN \
         libfreetype6=2.8.1-2ubuntu2 \
         libjpeg-turbo8-dev=1.5.2-0ubuntu5.18.04.1 \
         libjpeg-turbo8=1.5.2-0ubuntu5.18.04.1 \
+        libnginx-mod-http-lua=1.14.0-0ubuntu1.2 \
         libpng-dev=1.6.34-1ubuntu0.18.04.1 \
         libpng16-16=1.6.34-1ubuntu0.18.04.1 \
         libssl-dev=1.1.0g-2ubuntu4.3 \
@@ -38,6 +39,8 @@ RUN \
         libxslt1.1=1.1.29-5 \
         libzmq3-dev=4.2.5-1 \
         libzmq5=4.2.5-1 \
+        luarocks=2.4.2+dfsg-1 \
+        nginx=1.14.0-0ubuntu1.2 \
         pandoc=1.19.2.4~dfsg-1build4 \
         pkg-config=0.29.1-0ubuntu2 \
         python-dev=2.7.15~rc1-1 \
@@ -45,6 +48,8 @@ RUN \
         python3-distutils=3.6.7-1~18.04 \
         python3-minimal=3.6.7-1~18.04 \
         zlib1g-dev=1:1.2.11.dfsg-0ubuntu2 \
+    \
+    && luarocks install lua-resty-http 0.12-0 \
     \
     && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
     \
