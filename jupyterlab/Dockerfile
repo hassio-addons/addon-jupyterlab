@@ -60,6 +60,9 @@ RUN \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     \
+    && update-alternatives \
+        --install /usr/bin/python python /usr/bin/python3 10 \
+    \
     && pip3 install --no-cache-dir -r /opt/requirements.txt \
     \
     && jupyter labextension install \
