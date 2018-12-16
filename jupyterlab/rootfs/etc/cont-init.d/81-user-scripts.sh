@@ -1,14 +1,14 @@
 #!/usr/bin/with-contenv bash
 # ==============================================================================
 # Community Hass.io Add-ons: JupyterLab Lite
-# Install user configured/requested Python packages
+# Executes user configured/requested commands on startup
 # ==============================================================================
 # shellcheck disable=SC1091
 source /usr/lib/hassio-addons/base.sh
 
-if hass.config.has_value 'python_packages'; then
-    for package in $(hass.config.get 'python_packages'); do
-        pip3 install "$package" \
-            || hass.die "Failed installing package ${package}"
-    done
+if hass.config.has_value 'init_commands'; then
+    while read -r cmd; do
+        eval "${cmd}" \
+            || hass.die "Failed executing init command: ${cmd}"
+    done <<< "$(hass.config.get 'init_commands')"
 fi
