@@ -5,7 +5,6 @@ HASS-data-detective==0.7
 influxdb==5.2.1
 ipywidgets==7.4.2
 jupyterlab_github==0.7.0
-jupyterlab-git==0.5.0
 jupyterlab==0.35.4
 matplotlib==3.0.2
 nbconvert==5.4.0
