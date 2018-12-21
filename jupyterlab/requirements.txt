@@ -1,7 +1,7 @@
 beautifulsoup4==4.6.3
 bokeh==1.0.2
 geopy==1.18.0
-HASS-data-detective==0.7
+HASS-data-detective==0.9
 influxdb==5.2.1
 ipywidgets==7.4.2
 jupyterlab_github==0.7.0
