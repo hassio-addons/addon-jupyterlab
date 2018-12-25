@@ -156,7 +156,7 @@ panel_iframe:
   jupyterlab:
     title: JupyterLab
     icon: mdi:flask
-    url: https://addres.to.your.hass.io:8888
+    url: https://addres.to.your.hass.io:7777
 ```
 
 ## Getting a GitHub access token
