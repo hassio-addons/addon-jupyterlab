@@ -21,6 +21,9 @@ if ! hass.directory_exists '/config/notebooks'; then
         https://github.com/bokeh/bokeh-notebooks.git \
         "${BOOKS}bokeh-examples" \
             || hass.die 'Failed installing Bokeh example notebooks'
+            
+   ln -sf "${BOOKS}home-assistant/~ GETTING STARTED.ipynb" "${BOOKS}GETTING STARTED.ipynb"
+            
 else
     if [ -z "$(git -C ${BOOKS}/home-assistant status --untracked-files=no --porcelain)" ];
     then
