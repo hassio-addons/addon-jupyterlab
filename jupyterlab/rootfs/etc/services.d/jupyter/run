@@ -30,12 +30,6 @@ case "$(hass.string.lower "$(hass.config.get 'log_level')")" in
         ;;
 esac
 
-# SSL Configuration
-if hass.config.true 'ssl'; then
-    options+=(--keyfile="/ssl/$(hass.config.get 'keyfile')")
-    options+=(--certfile="/ssl/$(hass.config.get 'certfile')")
-fi
-
 # Change current working directory
 cd /config/notebooks || hass.die 'Failed changing working directory'
 
