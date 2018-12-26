@@ -160,13 +160,13 @@ panel_iframe:
 You can get an access token by following these steps:
 
 1. [Verify][github-verify] your email address with GitHub.
-2. Go to your account settings on GitHub and select "Developer Settings"
+1. Go to your account settings on GitHub and select "Developer Settings"
    from the left panel.
-3. On the left, select "Personal access tokens"
-4. Click the "Generate new token" button, and enter your password.
-5. Give the token a description, and check the "**repo**" scope box.
-6. Click "Generate token"
-7. You should be given a string which will be your access token.
+1. On the left, select "Personal access tokens"
+1. Click the "Generate new token" button, and enter your password.
+1. Give the token a description, and check the "**repo**" scope box.
+1. Click "Generate token"
+1. You should be given a string which will be your access token.
 
 Remember that this token is effectively a password for your GitHub account.
 *Do not* share it online or check the token into version control,
