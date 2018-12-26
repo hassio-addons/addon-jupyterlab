@@ -62,7 +62,6 @@ Example add-on configuration:
 ```json
 {
     "log_level": "info",
-    "password": "omgpuppies",
     "github_access_token": "abcdef1234567890abcdef0123456789abcdef01",
     "ssl": true,
     "certfile": "fullchain.pem",
@@ -70,9 +69,11 @@ Example add-on configuration:
     "system_packages": [
       "ffmpeg"
     ],
-    "python_packages": [
-      "nltk"
+    "init_commands": [
+      "pip install virtualenv",
+      "pip install yamllint"
     ]
+}
 ```
 
 **Note**: _This is just an example, don't copy and past it! Create your own!_
@@ -95,11 +96,6 @@ more severe level, e.g., `debug` also shows `info` messages. By default,
 the `log_level` is set to `info`, which is the recommended setting unless
 you are troubleshooting.
 
-### Option: `password`
-
-Sets the password to authenticate with JupyterLab. Leaving the password
-empty, will disable password authentication.
-
 ### Option: `github_access_token`
 
 Sets an GitHub access token. When making unauthenticated requests to GitHub
@@ -108,6 +104,8 @@ on how many requests we can make. As such, you are likely to hit that limit
 within a few minutes of work.
 
 There is a chapter in this document with instruction on obtaining such a token.
+
+**Note**: _This option support secrets, e.g., `!secret github_token`._
 
 ### Option: `ssl`
 
@@ -134,13 +132,11 @@ installed to your JupyterLab setup (e.g., `g++`. `make`, `ffmpeg`).
 **Note**: _Adding many packages will result in a longer start-up time
 for the add-on._
 
-### Option: `python_packages`
+#### Option: `init_commands`
 
-Allows you to specify additional [Python packages][python-packages] to be
-installed to your JupyterLab setup (e.g., `PyMySQL`. `Requests`, `Pillow`).
-
-**Note**: _Adding many packages will result in a longer start-up time
-for the add-on._
+Customize your environment even more with the `init_commands` option.
+Add one or more shell commands to the list, and they will be executed every
+single time this add-on starts.
 
 ## Embedding into Home Assistant
 
@@ -164,13 +160,13 @@ panel_iframe:
 You can get an access token by following these steps:
 
 1. [Verify][github-verify] your email address with GitHub.
-1. Go to your account settings on GitHub and select "Developer Settings"
+2. Go to your account settings on GitHub and select "Developer Settings"
    from the left panel.
-1. On the left, select "Personal access tokens"
-1. Click the "Generate new token" button, and enter your password.
-1. Give the token a description, and check the "**repo**" scope box.
-1. Click "Generate token"
-1. You should be given a string which will be your access token.
+3. On the left, select "Personal access tokens"
+4. Click the "Generate new token" button, and enter your password.
+5. Give the token a description, and check the "**repo**" scope box.
+6. Click "Generate token"
+7. You should be given a string which will be your access token.
 
 Remember that this token is effectively a password for your GitHub account.
 *Do not* share it online or check the token into version control,
@@ -284,7 +280,7 @@ SOFTWARE.
 [microbadger]: https://microbadger.com/images/hassioaddons/jupyterlablite
 [patreon-shield]: https://www.frenck.nl/images/patreon.png
 [patreon]: https://www.patreon.com/frenck
-[project-stage-shield]: https://img.shields.io/badge/project%20stage-concept-red.svg
+[project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/jupyterlablite.svg
 [python-packages]: https://pypi.org/
 [reddit]: https://reddit.com/r/homeassistant
