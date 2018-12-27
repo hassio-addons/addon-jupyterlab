@@ -267,7 +267,7 @@ SOFTWARE.
 [discord]: https://discord.me/hassioaddons
 [dockerhub]: https://hub.docker.com/r/hassioaddons/jupyterlablite
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
-[forum]: https://community.home-assistant.io/?u=frenck
+[forum]: https://community.home-assistant.io/t/community-hass-io-add-on-jupyterlab-lite/87337?u=frenck
 [frenck]: https://github.com/frenck
 [github-verify]: https://help.github.com/articles/verifying-your-email-address
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-jupyterlab-lite/badges/master/pipeline.svg
