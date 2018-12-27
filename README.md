@@ -19,6 +19,8 @@
 Create documents containing live code, equations, visualizations,
 and explanatory text.
 
+![The JupyterLab Hass.io add-on](images/screenshot.png)
+
 ## About
 
 JupyterLab is an open-source web application that allows you to create and share
