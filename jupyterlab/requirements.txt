@@ -12,7 +12,7 @@ nbconvert==5.4.0
 numpy==1.16.0
 pandas-datareader==0.7.0
 pandas==0.23.4
-psycopg2==2.7.6.1
+psycopg2==2.7.7
 python-dateutil==2.7.5
 scrapy==1.5.1
 SQLAlchemy==1.2.16
