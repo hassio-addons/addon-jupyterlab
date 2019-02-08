@@ -7,7 +7,7 @@ ipywidgets==7.4.2
 jupyterlab_github==0.7.0
 jupyterlab==0.35.4
 matplotlib==3.0.2
-mysqlclient==1.4.1
+mysqlclient==1.4.2
 nbconvert==5.4.0
 numpy==1.16.0
 pandas-datareader==0.7.0
