@@ -53,7 +53,7 @@ RUN \
         python3-minimal=3.6.7-1~18.04 \
         zlib1g-dev=1:1.2.11.dfsg-0ubuntu2 \
     \
-    && luarocks install lua-resty-http 0.12-0 \
+    && luarocks install lua-resty-http 0.13-0 \
     \
     && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
     \
