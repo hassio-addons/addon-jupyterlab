@@ -2,7 +2,7 @@ beautifulsoup4==4.7.1
 bokeh==1.0.4
 geopy==1.18.1
 HASS-data-detective==1.0
-influxdb==5.2.1
+influxdb==5.2.2
 ipywidgets==7.4.2
 jupyterlab_github==0.7.0
 jupyterlab==0.35.4
