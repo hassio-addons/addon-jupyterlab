@@ -27,7 +27,6 @@
     "ssl"
   ],
   "options": {
-    "log_level": "info",
     "github_access_token": "",
     "ssl": false,
     "certfile": "fullchain.pem",
@@ -36,7 +35,7 @@
     "init_commands": []
   },
   "schema": {
-    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
+    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)?",
     "github_access_token": "str",
     "ssl": "bool",
     "certfile": "str",
