@@ -1,37 +1,38 @@
-#!/usr/bin/with-contenv bash
+#!/usr/bin/with-contenv bashio
 # shellcheck disable=SC2191
 # ==============================================================================
 # Community Hass.io Add-ons: JupyterLab Lite
 # Runs Jupyter
 # ==============================================================================
-# shellcheck disable=SC1091
-source /usr/lib/hassio-addons/base.sh
-
 declare -a options
 
-hass.log.info 'Starting the Jupyter server'
+bashio::log.info 'Starting the Jupyter server...'
 
 # Find the matching Jupyter log level
-case "$(hass.string.lower "$(hass.config.get 'log_level')")" in
-    all|trace|debug)
-        options+=(--log-level='DEBUG')
-        ;;
-    info|notice)
-        options+=(--log-level='INFO')
-        ;;
-    warning)
-        options+=(--log-level='WARN')
-        ;;
-    error)
-        options+=(--log-level='ERROR')
-        ;;
-    fatal|off)
-        options+=(--log-level='CRITICAL')
-        ;;
-esac
+if bashio::config.exists 'log_level'; then
+    case "$(bashio::string.lower "$(bashio::config 'log_level')")" in
+        all|trace|debug)
+            options+=(--log-level='DEBUG')
+            ;;
+        info|notice)
+            options+=(--log-level='INFO')
+            ;;
+        warning)
+            options+=(--log-level='WARN')
+            ;;
+        error)
+            options+=(--log-level='ERROR')
+            ;;
+        fatal|off)
+            options+=(--log-level='CRITICAL')
+            ;;
+    esac
+else
+    options+=(--log-level='INFO')
+fi
 
 # Change current working directory
-cd /config/notebooks || hass.die 'Failed changing working directory'
+cd /config/notebooks || bashio::exit.nok 'Failed changing working directory'
 
 # Run Juypter Notebook server
 exec jupyter lab "${options[@]}"
