@@ -42,8 +42,5 @@
     "keyfile": "str",
     "system_packages": ["str"],
     "init_commands": ["str"]
-  },
-  "environment": {
-    "LOG_FORMAT": "{LEVEL}: {MESSAGE}"
   }
 }
