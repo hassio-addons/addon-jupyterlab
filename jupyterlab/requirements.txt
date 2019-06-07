@@ -8,7 +8,7 @@ jupyterlab_github==0.7.0
 jupyterlab==0.35.4
 matplotlib==3.1.0
 mysqlclient==1.4.2.post1
-nbconvert==5.4.1
+nbconvert==5.5.0
 numpy==1.16.4
 pandas-datareader==0.7.0
 pandas==0.24.2
