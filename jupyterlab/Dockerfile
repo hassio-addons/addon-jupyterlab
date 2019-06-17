@@ -58,7 +58,7 @@ RUN \
     && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
     \
     && apt-get install -y --no-install-recommends \
-        nodejs=8.15.1-1nodesource1 \
+        nodejs=8.16.0-1nodesource1 \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     \
