@@ -3,7 +3,7 @@ bokeh==1.2.0
 geopy==1.20.0
 HASS-data-detective==1.0
 influxdb==5.2.2
-ipywidgets==7.4.2
+ipywidgets==7.5.0
 jupyterlab_github==0.7.0
 jupyterlab==1.0.0
 matplotlib==3.1.0
