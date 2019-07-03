@@ -6,7 +6,7 @@ influxdb==5.2.2
 ipywidgets==7.5.0
 jupyterlab_github==0.7.0
 jupyterlab==1.0.1
-matplotlib==3.1.0
+matplotlib==3.1.1
 mysqlclient==1.4.2.post1
 nbconvert==5.5.0
 numpy==1.16.4
