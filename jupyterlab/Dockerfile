@@ -41,8 +41,8 @@ RUN \
         libxml2=2.9.4+dfsg1-6.1ubuntu1.2 \
         libxslt1-dev=1.1.29-5 \
         libxslt1.1=1.1.29-5 \
-        libzmq3-dev=4.2.5-1ubuntu0.1 \
-        libzmq5=4.2.5-1ubuntu0.1 \
+        libzmq3-dev=4.2.5-1ubuntu0.2 \
+        libzmq5=4.2.5-1ubuntu0.2 \
         luarocks=2.4.2+dfsg-1 \
         nginx=1.14.0-0ubuntu1.2 \
         pandoc=1.19.2.4~dfsg-1build4 \
