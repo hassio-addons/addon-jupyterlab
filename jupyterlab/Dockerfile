@@ -69,7 +69,7 @@ RUN \
     && pip3 install --no-cache-dir -r /opt/requirements.txt \
     \
     && jupyter labextension install \
-        @jupyter-widgets/jupyterlab-manager@0.38 --no-build \
+        @jupyter-widgets/jupyterlab-manager@1.0 --no-build \
     && jupyter labextension install jupyterlab_bokeh --no-build \
     && jupyter labextension install @jupyterlab/github --no-build \
     && jupyter lab build \
