@@ -33,8 +33,7 @@ RUN \
         libnginx-mod-http-lua=1.14.0-0ubuntu1.3 \
         libpng-dev=1.6.34-1ubuntu0.18.04.2 \
         libpng16-16=1.6.34-1ubuntu0.18.04.2 \
-        libpq-dev=10.9-0ubuntu0.18.04.1 \
-        libpq5=10.9-0ubuntu0.18.04.1 \
+        libpq-dev=10.10-0ubuntu0.18.04.1 \
         libssl-dev=1.1.1-1ubuntu2.1~18.04.4 \
         libtiff5-dev=4.0.9-5ubuntu0.2 \
         libxml2-dev=2.9.4+dfsg1-6.1ubuntu1.2 \
