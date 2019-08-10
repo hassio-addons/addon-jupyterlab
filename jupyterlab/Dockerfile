@@ -44,7 +44,7 @@ RUN \
         libzmq3-dev=4.2.5-1ubuntu0.2 \
         libzmq5=4.2.5-1ubuntu0.2 \
         luarocks=2.4.2+dfsg-1 \
-        nginx=1.14.0-0ubuntu1.2 \
+        nginx=1.14.0-0ubuntu1.3 \
         pandoc=1.19.2.4~dfsg-1build4 \
         pkg-config=0.29.1-0ubuntu2 \
         python-dev=2.7.15~rc1-1 \
