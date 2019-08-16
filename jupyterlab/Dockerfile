@@ -30,7 +30,7 @@ RUN \
         libjpeg-turbo8=1.5.2-0ubuntu5.18.04.1 \
         libmysqlclient-dev=5.7.27-0ubuntu0.18.04.1 \
         libmysqlclient20=5.7.27-0ubuntu0.18.04.1 \
-        libnginx-mod-http-lua=1.14.0-0ubuntu1.3 \
+        libnginx-mod-http-lua=1.14.0-0ubuntu1.5 \
         libpng-dev=1.6.34-1ubuntu0.18.04.2 \
         libpng16-16=1.6.34-1ubuntu0.18.04.2 \
         libpq-dev=10.10-0ubuntu0.18.04.1 \
@@ -44,7 +44,7 @@ RUN \
         libzmq3-dev=4.2.5-1ubuntu0.2 \
         libzmq5=4.2.5-1ubuntu0.2 \
         luarocks=2.4.2+dfsg-1 \
-        nginx=1.14.0-0ubuntu1.3 \
+        nginx=1.14.0-0ubuntu1.5 \
         pandoc=1.19.2.4~dfsg-1build4 \
         pkg-config=0.29.1-0ubuntu2 \
         python-dev=2.7.15~rc1-1 \
