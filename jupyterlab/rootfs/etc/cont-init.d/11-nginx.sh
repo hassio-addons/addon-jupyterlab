@@ -5,6 +5,7 @@
 # ==============================================================================
 declare certfile
 declare keyfile
+declare hassio_dns
 
 mkdir -p /var/log/nginx
 
@@ -18,3 +19,6 @@ if bashio::config.true 'ssl'; then
     sed -i "s#%%certfile%%#${certfile}#g" /etc/nginx/nginx.conf
     sed -i "s#%%keyfile%%#${keyfile}#g" /etc/nginx/nginx.conf
 fi
+
+hassio_dns=$(bashio::dns.host)
+sed -i "s/%%hassio_dns%%/${hassio_dns}/g" /etc/nginx/nginx.conf
