@@ -140,7 +140,7 @@ single time this add-on starts.
 It is possible to embed JupyterLab directly into Home Assistant, allowing
 you to access the JupyterLab through the Home Assistant frontend.
 
-Home Assistant provides the `panel_iframe` component, for these purposes.
+Home Assistant provides the `panel_iframe` integration, for these purposes.
 
 Example configuration:
 
