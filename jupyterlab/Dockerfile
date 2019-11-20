@@ -28,8 +28,8 @@ RUN \
         libfreetype6=2.8.1-2ubuntu2 \
         libjpeg-turbo8-dev=1.5.2-0ubuntu5.18.04.3 \
         libjpeg-turbo8=1.5.2-0ubuntu5.18.04.3 \
-        libmysqlclient-dev=5.7.27-0ubuntu0.18.04.1 \
-        libmysqlclient20=5.7.27-0ubuntu0.18.04.1 \
+        libmysqlclient-dev=5.7.28-0ubuntu0.18.04.4 \
+        libmysqlclient20=5.7.28-0ubuntu0.18.04.4 \
         libnginx-mod-http-lua=1.14.0-0ubuntu1.6 \
         libpng-dev=1.6.34-1ubuntu0.18.04.2 \
         libpng16-16=1.6.34-1ubuntu0.18.04.2 \
