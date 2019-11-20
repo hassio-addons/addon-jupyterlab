@@ -36,7 +36,7 @@ RUN \
         libpq-dev=10.10-0ubuntu0.18.04.1 \
         libpq5=10.10-0ubuntu0.18.04.1 \
         libssl-dev=1.1.1-1ubuntu2.1~18.04.5 \
-        libtiff5-dev=4.0.9-5ubuntu0.2 \
+        libtiff5-dev=4.0.9-5ubuntu0.3 \
         libxml2-dev=2.9.4+dfsg1-6.1ubuntu1.2 \
         libxml2=2.9.4+dfsg1-6.1ubuntu1.2 \
         libxslt1-dev=1.1.29-5 \
