@@ -42,7 +42,8 @@ reproducible computing, based on the Jupyter Notebook and Architecture.
 The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Hass.io add-on.
 
-1. Search for the "JupyterLab Lite" add-on in the Hass.io add-on store and install it.
+1. Search for the "JupyterLab Lite" add-on in the Hass.io add-on store
+   and install it.
 1. Start the "JupyterLab Lite" add-on
 1. Check the logs of the "JupyterLab Lite" add-on to see if everything went well.
 
