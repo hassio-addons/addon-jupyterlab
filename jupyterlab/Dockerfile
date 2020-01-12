@@ -72,6 +72,7 @@ RUN \
         @jupyter-widgets/jupyterlab-manager@1.1 --no-build \
     && jupyter labextension install jupyterlab_bokeh --no-build \
     && jupyter labextension install @jupyterlab/github --no-build \
+    && jupyter serverextension enable jupyterlab_sql --py --sys-prefix \
     && jupyter lab build \
     \
     && apt-get purge -y --auto-remove \
