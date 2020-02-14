@@ -53,21 +53,17 @@ comparison to installing any other Hass.io add-on.
 
 Example add-on configuration:
 
-```json
-{
-    "log_level": "info",
-    "github_access_token": "abcdef1234567890abcdef0123456789abcdef01",
-    "ssl": true,
-    "certfile": "fullchain.pem",
-    "keyfile": "privkey.pem",
-    "system_packages": [
-      "ffmpeg"
-    ],
-    "init_commands": [
-      "pip install virtualenv",
-      "pip install yamllint"
-    ]
-}
+```yaml
+log_level: info
+github_access_token: abcdef1234567890abcdef0123456789abcdef01
+ssl: true
+certfile: fullchain.pem
+keyfile: privkey.pem
+system_packages:
+  - ffmpeg
+init_commands:
+  - pip install virtualenv
+  - pip install yamllint
 ```
 
 **Note**: _This is just an example, don't copy and past it! Create your own!_
