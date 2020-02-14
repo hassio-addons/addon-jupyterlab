@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Community Hass.io Add-ons: JupyterLab Lite
+# Home Assistant Community Add-on: JupyterLab Lite
 # Install the users GitHub Access token into JupyterLab
 # ==============================================================================
 readonly CONFIG_PATH="/etc/jupyter/jupyter_notebook_config.py"

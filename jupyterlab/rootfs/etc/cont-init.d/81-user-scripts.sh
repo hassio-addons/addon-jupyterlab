@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Community Hass.io Add-ons: JupyterLab Lite
+# Home Assistant Community Add-on: JupyterLab Lite
 # Executes user configured/requested commands on startup
 # ==============================================================================
 if bashio::config.has_value 'init_commands'; then

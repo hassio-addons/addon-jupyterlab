@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Community Hass.io Add-ons: JupyterLab Lite
+# Home Assistant Community Add-on: JupyterLab Lite
 # Ensures the JupyterLab notebooks directory exists
 # ==============================================================================
 readonly BOOKS="/config/notebooks/"
