@@ -2,7 +2,7 @@
   "name": "JupyterLab Lite",
   "version": "dev",
   "slug": "jupyterlablite",
-  "description": "Create documents containing live code, equations, visualizations, and explanatory text.",
+  "description": "Create documents containing live code, equations, visualizations, and explanatory text",
   "url": "https://github.com/hassio-addons/addon-jupyterlab-lite",
   "webui": "[PROTO:ssl]://[HOST]:[PORT:7777]",
   "startup": "application",

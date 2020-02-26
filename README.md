@@ -24,7 +24,7 @@
 Create documents containing live code, equations, visualizations,
 and explanatory text.
 
-![The JupyterLab Hass.io add-on](images/screenshot.png)
+![The JupyterLab add-on](images/screenshot.png)
 
 ## About
 
@@ -142,7 +142,7 @@ panel_iframe:
   jupyterlab:
     title: JupyterLab
     icon: mdi:flask
-    url: https://addres.to.your.hass.io:7777
+    url: https://addres.to.your.home.assistant:7777
 ```
 
 ## Getting a GitHub access token
