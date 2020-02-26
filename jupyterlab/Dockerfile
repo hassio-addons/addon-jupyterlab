@@ -7,6 +7,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Copy Python requirements file
 COPY requirements.txt /opt/
+COPY rootfs/etc/pip.conf /etc/pip.conf
 
 # Setup base
 # hadolint ignore=DL3018
