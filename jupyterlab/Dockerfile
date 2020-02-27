@@ -56,10 +56,10 @@ RUN \
     \
     && luarocks install lua-resty-http 0.15-0 \
     \
-    && curl -sL https://deb.nodesource.com/setup_10.x | bash - \
+    && curl -sL https://deb.nodesource.com/setup_12.x | bash - \
     \
     && apt-get install -y --no-install-recommends \
-        nodejs=10.19.0-1nodesource1 \
+        nodejs=12.16.1-1nodesource1 \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     \
