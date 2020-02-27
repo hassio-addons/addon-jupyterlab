@@ -260,7 +260,7 @@ SOFTWARE.
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-jupyterlab-lite/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-jupyterlab-lite/pipelines
 [home-assistant]: https://home-assistant.io
-[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
+[i386-shield]: https://img.shields.io/badge/i386-no-red.svg
 [issue]: https://github.com/hassio-addons/addon-jupyterlab-lite/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-jupyterlab-lite.svg

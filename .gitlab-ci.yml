@@ -6,9 +6,9 @@ variables:
   ADDON_SLUG: "jupyterlablite"
   ADDON_TARGET: "jupyterlab"
   ADDON_ARMHF: "false"
+  ADDON_I386: "false"
   ADDON_LEGACY_TAGS: "true"
 
   ADDON_AARCH64_BASE: "hassioaddons/debian-base-aarch64:3.0.1"
   ADDON_AMD64_BASE: "hassioaddons/debian-base-amd64:3.0.1"
   ADDON_ARMV7_BASE: "hassioaddons/debian-base-armv7:3.0.1"
-  ADDON_I386_BASE: "hassioaddons/debian-base-i386:3.0.1"
