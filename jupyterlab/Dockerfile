@@ -71,7 +71,7 @@ RUN \
     \
     && jupyter labextension install \
         @jupyter-widgets/jupyterlab-manager@2.0.0 --no-build \
-    && jupyter labextension install jupyterlab_bokeh --no-build \
+    && jupyter labextension install @bokeh/jupyter_bokeh --no-build \
     && jupyter labextension install @jupyterlab/github --no-build \
     && jupyter serverextension enable jupyterlab_sql --py --sys-prefix \
     && jupyter lab build \
