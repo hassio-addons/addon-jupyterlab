@@ -31,7 +31,7 @@ RUN \
         libjpeg62-turbo=1:1.5.2-2+b1 \
         libmariadb-dev=1:10.3.25-0+deb10u1 \
         libmariadb3=1:10.3.25-0+deb10u1 \
-        libnginx-mod-http-lua=1.14.2-2+deb10u1 \
+        libnginx-mod-http-lua=1.14.2-2+deb10u3 \
         libpng-dev=1.6.36-6 \
         libpng16-16=1.6.36-6 \
         libpq-dev=11.7-0+deb10u1 \
@@ -45,7 +45,7 @@ RUN \
         libzmq3-dev=4.3.1-4+deb10u1 \
         libzmq5=4.3.1-4+deb10u1 \
         luarocks=2.4.2+dfsg-1 \
-        nginx=1.14.2-2+deb10u1 \
+        nginx=1.14.2-2+deb10u3 \
         pandoc=2.2.1-3+b2 \
         pkg-config=0.29-6 \
         python-dev=2.7.16-1 \
