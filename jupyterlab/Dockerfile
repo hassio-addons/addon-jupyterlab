@@ -46,7 +46,7 @@ RUN \
         libzmq5=4.3.1-4+deb10u2 \
         luarocks=2.4.2+dfsg-1 \
         nginx=1.14.2-2+deb10u3 \
-        pandoc=2.2.1-3+b2 \
+        pandoc>=2.2.1-3 \
         pkg-config=0.29-6 \
         python-dev=2.7.16-1 \
         python3-dev=3.7.3-1 \
