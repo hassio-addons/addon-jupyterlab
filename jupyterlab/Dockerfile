@@ -10,7 +10,7 @@ COPY requirements.txt /opt/
 COPY rootfs/etc/pip.conf /etc/pip.conf
 
 # Setup base
-# hadolint ignore=DL3018
+# hadolint ignore=DL3018,DL3008
 ARG BUILD_ARCH
 RUN \
     MAKEFLAGS="-j$(nproc)" \
