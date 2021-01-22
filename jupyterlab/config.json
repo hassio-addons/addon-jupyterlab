@@ -5,14 +5,10 @@
   "description": "Create documents containing live code, equations, visualizations, and explanatory text",
   "url": "https://github.com/hassio-addons/addon-jupyterlab-lite",
   "webui": "[PROTO:ssl]://[HOST]:[PORT:7777]",
-  "startup": "application",
   "arch": ["aarch64", "amd64", "armhf"],
-  "boot": "auto",
   "hassio_api": true,
   "auth_api": true,
-  "hassio_role": "default",
   "homeassistant_api": true,
-  "host_network": false,
   "ports": {
     "7777/tcp": 7777
   },
