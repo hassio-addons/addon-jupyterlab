@@ -137,8 +137,7 @@ as people can use it to access all of your data on GitHub.
 ## Changelog & Releases
 
 This repository keeps a change log using [GitHub's releases][releases]
-functionality. The format of the log is based on
-[Keep a Changelog][keepchangelog].
+functionality.
 
 Releases are based on [Semantic Versioning][semver], and use the format
 of `MAJOR.MINOR.PATCH`. In a nutshell, the version will be incremented
@@ -203,7 +202,6 @@ SOFTWARE.
 [frenck]: https://github.com/frenck
 [github-verify]: https://help.github.com/articles/verifying-your-email-address
 [issue]: https://github.com/hassio-addons/addon-jupyterlab-lite/issues
-[keepchangelog]: http://keepachangelog.com/en/1.0.0/
 [python-packages]: https://pypi.org/
 [reddit]: https://reddit.com/r/homeassistant
 [releases]: https://github.com/hassio-addons/addon-jupyterlab-lite/releases
