@@ -1,6 +1,6 @@
 #!/usr/bin/execlineb -S0
 # ==============================================================================
-# Home Assistant Community Add-on: JupyterLab Lite
+# Home Assistant Community Add-on: JupyterLab
 # Take down the S6 supervision tree when the Jupyter daemon fails
 # ==============================================================================
 if -n { s6-test $# -ne 0 }

@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Home Assistant Community Add-on: JupyterLab Lite
+# Home Assistant Community Add-on: JupyterLab
 # Configures NGINX for use with JupyterLab
 # ==============================================================================
 

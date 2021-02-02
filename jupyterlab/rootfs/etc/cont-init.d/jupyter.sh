@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Home Assistant Community Add-on: JupyterLab Lite
+# Home Assistant Community Add-on: JupyterLab
 # Configure JupterLabs
 # ==============================================================================
 if ! bashio::fs.directory_exists '/data/user-settings'; then

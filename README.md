@@ -1,4 +1,4 @@
-# Home Assistant Community Add-on: JupyterLab Lite
+# Home Assistant Community Add-on: JupyterLab
 
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
@@ -105,30 +105,30 @@ SOFTWARE.
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-no-red.svg
-[commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-jupyterlab-lite.svg
-[commits]: https://github.com/hassio-addons/addon-jupyterlab-lite/commits/main
-[contributors]: https://github.com/hassio-addons/addon-jupyterlab-lite/graphs/contributors
+[commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-jupyterlab.svg
+[commits]: https://github.com/hassio-addons/addon-jupyterlab/commits/main
+[contributors]: https://github.com/hassio-addons/addon-jupyterlab/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord-shield]: https://img.shields.io/discord/478094546522079232.svg
 [discord]: https://discord.me/hassioaddons
-[docs]: https://github.com/hassio-addons/addon-jupyterlab-lite/blob/main/jupyterlab-lite/DOCS.md
+[docs]: https://github.com/hassio-addons/addon-jupyterlab/blob/main/jupyterlab/DOCS.md
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-jupyterlab-lite/87337?u=frenck
 [frenck]: https://github.com/frenck
-[github-actions-shield]: https://github.com/hassio-addons/addon-jupyterlab-lite/workflows/CI/badge.svg
-[github-actions]: https://github.com/hassio-addons/addon-jupyterlab-lite/actions
+[github-actions-shield]: https://github.com/hassio-addons/addon-jupyterlab/workflows/CI/badge.svg
+[github-actions]: https://github.com/hassio-addons/addon-jupyterlab/actions
 [github-sponsors-shield]: https://frenck.dev/wp-content/uploads/2019/12/github_sponsor.png
 [github-sponsors]: https://github.com/sponsors/frenck
 [home-assistant]: https://home-assistant.io
 [i386-shield]: https://img.shields.io/badge/i386-no-red.svg
-[issue]: https://github.com/hassio-addons/addon-jupyterlab-lite/issues
-[license-shield]: https://img.shields.io/github/license/hassio-addons/addon-jupyterlab-lite.svg
+[issue]: https://github.com/hassio-addons/addon-jupyterlab/issues
+[license-shield]: https://img.shields.io/github/license/hassio-addons/addon-jupyterlab.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2021.svg
 [patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
 [patreon]: https://www.patreon.com/frenck
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [python-packages]: https://pypi.org/
 [reddit]: https://reddit.com/r/homeassistant
-[releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-jupyterlab-lite.svg
-[releases]: https://github.com/hassio-addons/addon-jupyterlab-lite/releases
+[releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-jupyterlab.svg
+[releases]: https://github.com/hassio-addons/addon-jupyterlab/releases
 [repository]: https://github.com/hassio-addons/repository

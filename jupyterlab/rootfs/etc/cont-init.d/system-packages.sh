@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Home Assistant Community Add-on: JupyterLab Lite
+# Home Assistant Community Add-on: JupyterLab
 # Install user configured requested packages & commands
 # ==============================================================================
 if bashio::config.has_value 'system_packages'; then
