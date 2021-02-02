@@ -1,4 +1,4 @@
-# Home Assistant Community Add-on: JupyterLab Lite
+# Home Assistant Community Add-on: JupyterLab
 
 JupyterLab is an open-source web application that allows you to create and share
 documents that contain live code, equations, visualizations and narrative text.
@@ -14,10 +14,10 @@ reproducible computing, based on the Jupyter Notebook and Architecture.
 The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Home Assistant add-on.
 
-1. Search for the "JupyterLab Lite" add-on in the Supervisor add-on store
+1. Search for the "JupyterLab" add-on in the Supervisor add-on store
    and install it.
-1. Start the "JupyterLab Lite" add-on
-1. Check the logs of the "JupyterLab Lite" add-on to see if everything went well.
+1. Start the "JupyterLab" add-on
+1. Check the logs of the "JupyterLab" add-on to see if everything went well.
 
 ## Configuration
 
@@ -28,9 +28,6 @@ Example add-on configuration:
 ```yaml
 log_level: info
 github_access_token: abcdef1234567890abcdef0123456789abcdef01
-ssl: true
-certfile: fullchain.pem
-keyfile: privkey.pem
 system_packages:
   - ffmpeg
 init_commands:
@@ -69,23 +66,6 @@ There is a chapter in this document with instruction on obtaining such a token.
 
 **Note**: _This option support secrets, e.g., `!secret github_token`._
 
-### Option: `ssl`
-
-Enables/Disables SSL (HTTPS) on the JupyterLab Set it `true` to enable it,
-`false` otherwise.
-
-### Option: `certfile`
-
-The certificate file to use for SSL.
-
-**Note**: _The file MUST be stored in `/ssl/`, which is the default_
-
-### Option: `keyfile`
-
-The private key file to use for SSL.
-
-**Note**: _The file MUST be stored in `/ssl/`, which is the default_
-
 ### Option: `system_packages`
 
 Allows you to specify additional [Alpine packages][alpine-packages] to be
@@ -99,23 +79,6 @@ for the add-on._
 Customize your environment even more with the `init_commands` option.
 Add one or more shell commands to the list, and they will be executed every
 single time this add-on starts.
-
-## Embedding into Home Assistant
-
-It is possible to embed JupyterLab directly into Home Assistant, allowing
-you to access the JupyterLab through the Home Assistant frontend.
-
-Home Assistant provides the `panel_iframe` integration, for these purposes.
-
-Example configuration:
-
-```yaml
-panel_iframe:
-  jupyterlab:
-    title: JupyterLab
-    icon: mdi:flask
-    url: https://addres.to.your.home.assistant:7777
-```
 
 ## Getting a GitHub access token
 
@@ -194,15 +157,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [alpine-packages]: https://pkgs.alpinelinux.org/packages
-[contributors]: https://github.com/hassio-addons/addon-jupyterlab-lite/graphs/contributors
+[contributors]: https://github.com/hassio-addons/addon-jupyterlab/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
-[forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-jupyterlab-lite/87337?u=frenck
+[forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-jupyterlab/87337?u=frenck
 [frenck]: https://github.com/frenck
 [github-verify]: https://help.github.com/articles/verifying-your-email-address
-[issue]: https://github.com/hassio-addons/addon-jupyterlab-lite/issues
+[issue]: https://github.com/hassio-addons/addon-jupyterlab/issues
 [python-packages]: https://pypi.org/
 [reddit]: https://reddit.com/r/homeassistant
-[releases]: https://github.com/hassio-addons/addon-jupyterlab-lite/releases
+[releases]: https://github.com/hassio-addons/addon-jupyterlab/releases
 [semver]: http://semver.org/spec/v2.0.0.htm

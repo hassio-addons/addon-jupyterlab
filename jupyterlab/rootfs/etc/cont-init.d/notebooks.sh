@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Home Assistant Community Add-on: JupyterLab Lite
+# Home Assistant Community Add-on: JupyterLab
 # Ensures the JupyterLab notebooks directory exists
 # ==============================================================================
 readonly BOOKS="/config/notebooks/"
@@ -20,11 +20,6 @@ if ! bashio::fs.directory_exists '/config/notebooks'; then
         "${BOOKS}bokeh-examples" \
             || bashio::exit.nok \
                 'Failed installing Bokeh example notebooks'
-
-    ln -sf \
-        "${BOOKS}home-assistant/~ GETTING STARTED.ipynb" \
-        "${BOOKS}GETTING STARTED.ipynb"
-
 else
     if [ -z "$(git -C ${BOOKS}/home-assistant status --untracked-files=no --porcelain)" ];
     then
