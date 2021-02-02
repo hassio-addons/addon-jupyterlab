@@ -5,12 +5,7 @@
 # ==============================================================================
 
 # Wait for JupyterLab to become available
-s6-svwait -u -t 5000 /var/run/s6/services/jupyter
-timeout 15 \
-    bash -c \
-        'until echo > /dev/tcp/localhost/28459 ; do sleep 0.5; done' \
-            > /dev/null 2>&1
+bashio::net.wait_for 28459
 
 bashio::log.info "Starting NGinx..."
-
-exec nginx -g "daemon off;"
+exec nginx

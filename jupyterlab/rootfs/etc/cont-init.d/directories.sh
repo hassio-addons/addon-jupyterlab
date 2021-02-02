@@ -20,4 +20,5 @@ if ! bashio::fs.directory_exists '/data/local'; then
         || bashio::exit.nok \
             'Failed creating persistent local directory'
 fi
+
 ln -s /data/local /root/.local
