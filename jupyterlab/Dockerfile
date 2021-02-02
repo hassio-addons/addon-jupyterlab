@@ -44,7 +44,6 @@ RUN \
         libxslt1.1=1.1.32-2.2~deb10u1 \
         libzmq3-dev=4.3.1-4+deb10u2 \
         libzmq5=4.3.1-4+deb10u2 \
-        luarocks=2.4.2+dfsg-1 \
         nginx=1.14.2-2+deb10u3 \
         pandoc>=2.2.1-3 \
         pkg-config=0.29-6 \
@@ -53,8 +52,6 @@ RUN \
         python3-distutils=3.7.3-1 \
         python3-minimal=3.7.3-1 \
         zlib1g-dev=1:1.2.11.dfsg-1 \
-    \
-    && luarocks install lua-resty-http 0.15-0 \
     \
     && curl -sL https://deb.nodesource.com/setup_12.x | bash - \
     \
