@@ -56,7 +56,7 @@ RUN \
     && curl -sL https://deb.nodesource.com/setup_12.x | bash - \
     \
     && apt-get install -y --no-install-recommends \
-        nodejs=12.20.1-1nodesource1 \
+        nodejs=12.20.2-1nodesource1 \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     \
