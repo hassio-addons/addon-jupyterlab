@@ -37,7 +37,7 @@ RUN \
         libpq-dev=11.11-0+deb10u1 \
         libpq5=11.11-0+deb10u1 \
         libssl-dev=1.1.1d-0+deb10u6 \
-        libtiff5-dev=4.1.0+git191117-2~deb10u1 \
+        libtiff5-dev=4.1.0+git191117-2~deb10u2 \
         libxml2-dev=2.9.4+dfsg1-7+deb10u1 \
         libxml2=2.9.4+dfsg1-7+deb10u1 \
         libxslt1-dev=1.1.32-2.2~deb10u1 \
