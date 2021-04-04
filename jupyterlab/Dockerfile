@@ -63,7 +63,7 @@ RUN \
     && update-alternatives \
         --install /usr/bin/python python /usr/bin/python3 10 \
     \
-    && pip3 install --no-cache-dir numpy==1.20.0 \
+    && pip3 install --no-cache-dir numpy==1.20.2 \
     && pip3 install --no-cache-dir -r /opt/requirements.txt \
     \
     && jupyter labextension install \
