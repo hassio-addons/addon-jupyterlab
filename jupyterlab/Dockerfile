@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:4.1.2
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:4.2.3
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -31,20 +31,20 @@ RUN \
         libjpeg62-turbo=1:1.5.2-2+deb10u1 \
         libmariadb-dev=1:10.3.25-0+deb10u1 \
         libmariadb3=1:10.3.25-0+deb10u1 \
-        libnginx-mod-http-lua=1.14.2-2+deb10u3 \
+        libnginx-mod-http-lua=1.14.2-2+deb10u4 \
         libpng-dev=1.6.36-6 \
         libpng16-16=1.6.36-6 \
-        libpq-dev=11.11-0+deb10u1 \
-        libpq5=11.11-0+deb10u1 \
+        libpq-dev=11.12-0+deb10u1 \
+        libpq5=11.12-0+deb10u1 \
         libssl-dev=1.1.1d-0+deb10u6 \
         libtiff5-dev=4.1.0+git191117-2~deb10u2 \
-        libxml2-dev=2.9.4+dfsg1-7+deb10u1 \
-        libxml2=2.9.4+dfsg1-7+deb10u1 \
+        libxml2-dev=2.9.4+dfsg1-7+deb10u2 \
+        libxml2=2.9.4+dfsg1-7+deb10u2 \
         libxslt1-dev=1.1.32-2.2~deb10u1 \
         libxslt1.1=1.1.32-2.2~deb10u1 \
         libzmq3-dev=4.3.1-4+deb10u2 \
         libzmq5=4.3.1-4+deb10u2 \
-        nginx=1.14.2-2+deb10u3 \
+        nginx=1.14.2-2+deb10u4 \
         pandoc>=2.2.1-3 \
         pkg-config=0.29-6 \
         python-dev=2.7.16-1 \
@@ -53,17 +53,17 @@ RUN \
         python3-minimal=3.7.3-1 \
         zlib1g-dev=1:1.2.11.dfsg-1 \
     \
-    && curl -sL https://deb.nodesource.com/setup_12.x | bash - \
+    && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
     \
     && apt-get install -y --no-install-recommends \
-        nodejs=12.22.0-1nodesource1 \
+        nodejs=14.17.5-1nodesource1 \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     \
     && update-alternatives \
         --install /usr/bin/python python /usr/bin/python3 10 \
     \
-    && pip3 install --no-cache-dir numpy==1.20.2 \
+    && pip3 install --no-cache-dir numpy==1.21.2 \
     && pip3 install --no-cache-dir -r /opt/requirements.txt \
     \
     && jupyter labextension install \
