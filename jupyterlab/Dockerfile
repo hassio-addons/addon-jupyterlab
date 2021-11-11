@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:4.1.2
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:5.2.2
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -18,60 +18,52 @@ RUN \
     \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
-        build-essential=12.6 \
-        dirmngr=2.2.12-1+deb10u1 \
-        git=1:2.20.1-2+deb10u3 \
-        gpg-agent=2.2.12-1+deb10u1 \
-        gpg=2.2.12-1+deb10u1 \
-        libffi-dev=3.2.1-9 \
-        libffi6=3.2.1-9 \
-        libfreetype6-dev=2.9.1-3+deb10u2 \
-        libfreetype6=2.9.1-3+deb10u2 \
-        libjpeg62-turbo-dev=1:1.5.2-2+deb10u1 \
-        libjpeg62-turbo=1:1.5.2-2+deb10u1 \
-        libmariadb-dev=1:10.3.25-0+deb10u1 \
-        libmariadb3=1:10.3.25-0+deb10u1 \
-        libnginx-mod-http-lua=1.14.2-2+deb10u3 \
-        libpng-dev=1.6.36-6 \
-        libpng16-16=1.6.36-6 \
-        libpq-dev=11.11-0+deb10u1 \
-        libpq5=11.11-0+deb10u1 \
-        libssl-dev=1.1.1d-0+deb10u6 \
-        libtiff5-dev=4.1.0+git191117-2~deb10u2 \
-        libxml2-dev=2.9.4+dfsg1-7+deb10u1 \
-        libxml2=2.9.4+dfsg1-7+deb10u1 \
-        libxslt1-dev=1.1.32-2.2~deb10u1 \
-        libxslt1.1=1.1.32-2.2~deb10u1 \
-        libzmq3-dev=4.3.1-4+deb10u2 \
-        libzmq5=4.3.1-4+deb10u2 \
-        nginx=1.14.2-2+deb10u3 \
-        pandoc>=2.2.1-3 \
-        pkg-config=0.29-6 \
-        python-dev=2.7.16-1 \
-        python3-dev=3.7.3-1 \
-        python3-distutils=3.7.3-1 \
-        python3-minimal=3.7.3-1 \
-        zlib1g-dev=1:1.2.11.dfsg-1 \
+        build-essential=12.9 \
+        dirmngr=2.2.27-2 \
+        git=1:2.30.2-1 \
+        gpg-agent=2.2.27-2 \
+        gpg=2.2.27-2 \
+        libffi-dev=3.3-6 \
+        libffi7=3.3-6 \
+        libfreetype6-dev=2.10.4+dfsg-1 \
+        libfreetype6=2.10.4+dfsg-1 \
+        libjpeg62-turbo-dev=1:2.0.6-4 \
+        libjpeg62-turbo=1:2.0.6-4 \
+        libmariadb-dev=1:10.5.12-0+deb11u1 \
+        libmariadb3=1:10.5.12-0+deb11u1 \
+        libnginx-mod-http-lua=1.18.0-6.1 \
+        libpng-dev=1.6.37-3 \
+        libpng16-16=1.6.37-3 \
+        libpq-dev=13.4-0+deb11u1 \
+        libpq5=13.4-0+deb11u1 \
+        libssl-dev=1.1.1k-1+deb11u1 \
+        libtiff5-dev=4.2.0-1 \
+        libxml2-dev=2.9.10+dfsg-6.7 \
+        libxml2=2.9.10+dfsg-6.7 \
+        libxslt1-dev=1.1.34-4 \
+        libxslt1.1=1.1.34-4 \
+        libzmq3-dev=4.3.4-1 \
+        libzmq5=4.3.4-1 \
+        nginx=1.18.0-6.1 \
+        pandoc=2.9.2.1-1+b1 \
+        pkg-config=0.29.2-1 \
+        python3-dev=3.9.2-3 \
+        python3-distutils=3.9.2-1 \
+        python3-minimal=3.9.2-3 \
+        zlib1g-dev=1:1.2.11.dfsg-2 \
     \
-    && curl -sL https://deb.nodesource.com/setup_12.x | bash - \
+    && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
     \
     && apt-get install -y --no-install-recommends \
-        nodejs=12.22.0-1nodesource1 \
+        nodejs=14.18.1-deb-1nodesource1 \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     \
     && update-alternatives \
         --install /usr/bin/python python /usr/bin/python3 10 \
     \
-    && pip3 install --no-cache-dir numpy==1.20.2 \
+    && pip3 install --no-cache-dir numpy==1.21.4 \
     && pip3 install --no-cache-dir -r /opt/requirements.txt \
-    \
-    && jupyter labextension install \
-        @jupyter-widgets/jupyterlab-manager@2.0.0 --no-build \
-    && jupyter labextension install @bokeh/jupyter_bokeh --no-build \
-    && jupyter labextension install @jupyterlab/github --no-build \
-    && jupyter serverextension enable jupyterlab_sql --py --sys-prefix \
-    && jupyter lab build \
     \
     && apt-get purge -y --auto-remove \
         build-essential \
@@ -94,10 +86,10 @@ RUN \
         python3-dev \
         zlib1g-dev \
     \
-    && find /usr/local/lib/python3.7/ -type d -name tests -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.7/ -type d -name test -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.7/ -name __pycache__ -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.7/ -name "*.pyc" -depth -exec rm -f {} \; \
+    && find /usr/local \
+        \( -type d -a -name test -o -name tests -o -name '__pycache__' \) \
+        -o \( -type f -a -name '*.pyc' -o -name '*.pyo' \) \
+        -exec rm -rf '{}' + \
     \
     && npm cache clean --force \
     \
