@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:6.0.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:6.1.1
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -19,32 +19,32 @@ RUN \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
         build-essential=12.9 \
-        dirmngr=2.2.27-2+deb11u1 \
+        dirmngr=2.2.27-2+deb11u2 \
         git=1:2.30.2-1 \
-        gpg-agent=2.2.27-2+deb11u1 \
-        gpg=2.2.27-2+deb11u1 \
+        gpg-agent=2.2.27-2+deb11u2 \
+        gpg=2.2.27-2+deb11u2 \
         libffi-dev=3.3-6 \
         libffi7=3.3-6 \
-        libfreetype6-dev=2.10.4+dfsg-1 \
-        libfreetype6=2.10.4+dfsg-1 \
+        libfreetype6-dev=2.10.4+dfsg-1+deb11u1 \
+        libfreetype6=2.10.4+dfsg-1+deb11u1 \
         libjpeg62-turbo-dev=1:2.0.6-4 \
         libjpeg62-turbo=1:2.0.6-4 \
         libmariadb-dev=1:10.5.15-0+deb11u1 \
         libmariadb3=1:10.5.15-0+deb11u1 \
-        libnginx-mod-http-lua=1.18.0-6.1 \
+        libnginx-mod-http-lua=1.18.0-6.1+deb11u2 \
         libpng-dev=1.6.37-3 \
         libpng16-16=1.6.37-3 \
-        libpq-dev=13.5-0+deb11u1 \
-        libpq5=13.5-0+deb11u1 \
-        libssl-dev=1.1.1n-0+deb11u2 \
-        libtiff5-dev=4.2.0-1 \
-        libxml2-dev=2.9.10+dfsg-6.7+deb11u1 \
-        libxml2=2.9.10+dfsg-6.7+deb11u1 \
+        libpq-dev=13.7-0+deb11u1 \
+        libpq5=13.7-0+deb11u1 \
+        libssl-dev=1.1.1n-0+deb11u3 \
+        libtiff5-dev=4.2.0-1+deb11u1 \
+        libxml2-dev=2.9.10+dfsg-6.7+deb11u2 \
+        libxml2=2.9.10+dfsg-6.7+deb11u2 \
         libxslt1-dev=1.1.34-4 \
         libxslt1.1=1.1.34-4 \
         libzmq3-dev=4.3.4-1 \
         libzmq5=4.3.4-1 \
-        nginx=1.18.0-6.1 \
+        nginx=1.18.0-6.1+deb11u2 \
         pandoc=2.9.2.1-1+b1 \
         pkg-config=0.29.2-1 \
         python3-dev=3.9.2-3 \
@@ -55,14 +55,14 @@ RUN \
     && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
     \
     && apt-get install -y --no-install-recommends \
-        nodejs=14.19.3-deb-1nodesource1 \
+        nodejs=14.20.0-deb-1nodesource1 \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     \
     && update-alternatives \
         --install /usr/bin/python python /usr/bin/python3 10 \
     \
-    && pip3 install --no-cache-dir numpy==1.21.4 \
+    && pip3 install --no-cache-dir numpy==1.23.2 \
     && pip3 install --no-cache-dir -r /opt/requirements.txt \
     \
     && apt-get purge -y --auto-remove \
