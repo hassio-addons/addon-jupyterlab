@@ -35,4 +35,4 @@ fi
 cd /config/notebooks || bashio::exit.nok 'Failed changing working directory'
 
 # Run Juypter Notebook server
-exec jupyter lab "${options[@]}"
+exec jupyter lab --allow-root "${options[@]}"
