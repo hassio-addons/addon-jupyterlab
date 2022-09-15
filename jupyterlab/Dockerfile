@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:6.1.1
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:6.1.2
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -40,8 +40,8 @@ RUN \
         libtiff5-dev=4.2.0-1+deb11u1 \
         libxml2-dev=2.9.10+dfsg-6.7+deb11u2 \
         libxml2=2.9.10+dfsg-6.7+deb11u2 \
-        libxslt1-dev=1.1.34-4 \
-        libxslt1.1=1.1.34-4 \
+        libxslt1-dev=1.1.34-4+deb11u1 \
+        libxslt1.1=1.1.34-4+deb11u1 \
         libzmq3-dev=4.3.4-1 \
         libzmq5=4.3.4-1 \
         nginx=1.18.0-6.1+deb11u2 \
@@ -50,7 +50,7 @@ RUN \
         python3-dev=3.9.2-3 \
         python3-distutils=3.9.2-1 \
         python3-minimal=3.9.2-3 \
-        zlib1g-dev=1:1.2.11.dfsg-2+deb11u1 \
+        zlib1g-dev=1:1.2.11.dfsg-2+deb11u2 \
     \
     && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
     \
