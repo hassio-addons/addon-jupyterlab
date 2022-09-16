@@ -27,7 +27,7 @@ bashio::var.json \
     entry "$(bashio::addon.ingress_entry)" \
     token "$(bashio::config 'github_access_token')" \
     | tempio \
-        -template /etc/jupyter/jupyter_notebook_config.gtpl \
-        -out /etc/jupyter/jupyter_notebook_config.py
+        -template /etc/jupyter/jupyter_server_config.gtpl \
+        -out /etc/jupyter/jupyter_server_config.py
 
 
