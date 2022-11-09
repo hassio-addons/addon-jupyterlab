@@ -16,5 +16,5 @@ pandas==1.5.1
 psycopg2==2.9.5
 python-dateutil==2.8.2
 scrapy==2.7.1
-seaborn==0.12.0
+seaborn==0.12.1
 SQLAlchemy==1.4.43
