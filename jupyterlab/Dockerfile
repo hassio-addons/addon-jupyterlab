@@ -55,7 +55,7 @@ RUN \
     && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
     \
     && apt-get install -y --no-install-recommends \
-        nodejs=14.20.1-deb-1nodesource1 \
+        nodejs=14.21.1-deb-1nodesource1 \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     \
