@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:6.1.2
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:6.2.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -31,7 +31,7 @@ RUN \
         libjpeg62-turbo=1:2.0.6-4 \
         libmariadb-dev=1:10.5.15-0+deb11u1 \
         libmariadb3=1:10.5.15-0+deb11u1 \
-        libnginx-mod-http-lua=1.18.0-6.1+deb11u2 \
+        libnginx-mod-http-lua=1.18.0-6.1+deb11u3 \
         libpng-dev=1.6.37-3 \
         libpng16-16=1.6.37-3 \
         libpq-dev=13.7-0+deb11u1 \
@@ -44,7 +44,7 @@ RUN \
         libxslt1.1=1.1.34-4+deb11u1 \
         libzmq3-dev=4.3.4-1 \
         libzmq5=4.3.4-1 \
-        nginx=1.18.0-6.1+deb11u2 \
+        nginx=1.18.0-6.1+deb11u3 \
         pandoc=2.9.2.1-1+b1 \
         pkg-config=0.29.2-1 \
         python3-dev=3.9.2-3 \
