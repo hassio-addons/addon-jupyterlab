@@ -29,8 +29,8 @@ RUN \
         libfreetype6=2.10.4+dfsg-1+deb11u1 \
         libjpeg62-turbo-dev=1:2.0.6-4 \
         libjpeg62-turbo=1:2.0.6-4 \
-        libmariadb-dev=1:10.5.15-0+deb11u1 \
-        libmariadb3=1:10.5.15-0+deb11u1 \
+        libmariadb-dev=1:10.5.18-0+deb11u1 \
+        libmariadb3=1:10.5.18-0+deb11u1 \
         libnginx-mod-http-lua=1.18.0-6.1+deb11u3 \
         libpng-dev=1.6.37-3 \
         libpng16-16=1.6.37-3 \
