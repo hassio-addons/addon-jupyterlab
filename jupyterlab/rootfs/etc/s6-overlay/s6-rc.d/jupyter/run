@@ -1,4 +1,5 @@
 #!/command/with-contenv bashio
+# shellcheck shell=bash
 # shellcheck disable=SC2191
 # ==============================================================================
 # Home Assistant Community Add-on: JupyterLab

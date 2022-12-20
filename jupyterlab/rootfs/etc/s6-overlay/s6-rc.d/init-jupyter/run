@@ -1,4 +1,5 @@
 #!/command/with-contenv bashio
+# shellcheck shell=bash
 # ==============================================================================
 # Home Assistant Community Add-on: JupyterLab
 # Configure JupterLabs
@@ -29,5 +30,3 @@ bashio::var.json \
     | tempio \
         -template /etc/jupyter/jupyter_server_config.gtpl \
         -out /etc/jupyter/jupyter_server_config.py
-
-
