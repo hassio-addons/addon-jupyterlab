@@ -20,7 +20,7 @@ RUN \
     && apt-get install -y --no-install-recommends \
         build-essential=12.9 \
         dirmngr=2.2.27-2+deb11u2 \
-        git=1:2.30.2-1 \
+        git=1:2.30.2-1+deb11u2 \
         gpg-agent=2.2.27-2+deb11u2 \
         gpg=2.2.27-2+deb11u2 \
         libffi-dev=3.3-6 \
