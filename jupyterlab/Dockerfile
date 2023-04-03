@@ -36,7 +36,7 @@ RUN \
         libpng16-16=1.6.37-3 \
         libpq-dev=13.7-0+deb11u1 \
         libpq5=13.7-0+deb11u1 \
-        libssl-dev=1.1.1n-0+deb11u3 \
+        libssl-dev=1.1.1n-0+deb11u4 \
         libtiff5-dev=4.2.0-1+deb11u1 \
         libxml2-dev=2.9.10+dfsg-6.7+deb11u3 \
         libxml2=2.9.10+dfsg-6.7+deb11u3 \
