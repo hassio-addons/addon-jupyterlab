@@ -39,7 +39,7 @@ RUN \
         libssl-dev=1.1.1n-0+deb11u4 \
         libtiff5-dev=4.2.0-1+deb11u1 \
         libxml2-dev=2.9.10+dfsg-6.7+deb11u3 \
-        libxml2=2.9.10+dfsg-6.7+deb11u3 \
+        libxml2=2.9.10+dfsg-6.7+deb11u4 \
         libxslt1-dev=1.1.34-4+deb11u1 \
         libxslt1.1=1.1.34-4+deb11u1 \
         libzmq3-dev=4.3.4-1 \
