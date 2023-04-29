@@ -57,6 +57,12 @@
       "matchDatasources": ["repology"],
       "matchDepPatterns": ["^debian_*/python3.*"],
       "automerge": true
+    },
+    {
+      "groupName": "MariaDB",
+      "matchDatasources": ["repology"],
+      "matchDepPatterns": ["^debian_*/libmariadb.*"],
+      "automerge": true
     }
   ]
 }
