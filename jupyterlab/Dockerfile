@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:6.2.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:6.2.6
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -37,8 +37,8 @@ RUN \
         libpq-dev=13.7-0+deb11u1 \
         libpq5=13.7-0+deb11u1 \
         libssl-dev=1.1.1n-0+deb11u4 \
-        libtiff5-dev=4.2.0-1+deb11u1 \
-        libxml2-dev=2.9.10+dfsg-6.7+deb11u3 \
+        libtiff5-dev=4.2.0-1+deb11u4 \
+        libxml2-dev=2.9.10+dfsg-6.7+deb11u4 \
         libxml2=2.9.10+dfsg-6.7+deb11u4 \
         libxslt1-dev=1.1.34-4+deb11u1 \
         libxslt1.1=1.1.34-4+deb11u1 \
