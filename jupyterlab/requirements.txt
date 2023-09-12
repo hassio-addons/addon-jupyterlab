@@ -7,7 +7,7 @@ ipywidgets==8.1.0
 jupyter_bokeh==3.0.7
 jupyterlab_widgets==3.0.8
 jupyterlab==4.0.5
-matplotlib==3.7.2
+matplotlib==3.7.3
 mysqlclient==2.2.0
 nbconvert==7.8.0
 numpy==1.25.2
