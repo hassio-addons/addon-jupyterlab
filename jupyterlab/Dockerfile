@@ -5,6 +5,9 @@ FROM ${BUILD_FROM}
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+# Install Python packages on system level
+ENV PIP_BREAK_SYSTEM_PACKAGES=1
+
 # Copy Python requirements file
 COPY requirements.txt /opt/
 COPY rootfs/etc/pip.conf /etc/pip.conf
@@ -19,50 +22,56 @@ RUN \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
         build-essential=12.9 \
-        dirmngr=2.2.27-2+deb11u2 \
-        git=1:2.30.2-1+deb11u2 \
-        gpg-agent=2.2.27-2+deb11u2 \
-        gpg=2.2.27-2+deb11u2 \
-        libffi-dev=3.3-6 \
-        libffi7=3.3-6 \
-        libfreetype6-dev=2.10.4+dfsg-1+deb11u1 \
-        libfreetype6=2.10.4+dfsg-1+deb11u1 \
-        libjpeg62-turbo-dev=1:2.0.6-4 \
-        libjpeg62-turbo=1:2.0.6-4 \
-        libmariadb-dev=1:10.5.19-0+deb11u2 \
-        libmariadb3=1:10.5.19-0+deb11u2 \
-        libnginx-mod-http-lua=1.18.0-6.1+deb11u3 \
-        libpng-dev=1.6.37-3 \
-        libpng16-16=1.6.37-3 \
-        libpq-dev=13.10-0+deb11u1 \
-        libpq5=13.10-0+deb11u1 \
-        libssl-dev=1.1.1n-0+deb11u4 \
-        libtiff5-dev=4.2.0-1+deb11u4 \
-        libxml2-dev=2.9.10+dfsg-6.7+deb11u4 \
-        libxml2=2.9.10+dfsg-6.7+deb11u4 \
-        libxslt1-dev=1.1.34-4+deb11u1 \
-        libxslt1.1=1.1.34-4+deb11u1 \
-        libzmq3-dev=4.3.4-1 \
-        libzmq5=4.3.4-1 \
-        nginx=1.18.0-6.1+deb11u3 \
-        pandoc=2.9.2.1-1+b1 \
-        pkg-config=0.29.2-1 \
-        python3-dev=3.9.2-3 \
-        python3-distutils=3.9.2-1 \
-        python3-minimal=3.9.2-3 \
-        zlib1g-dev=1:1.2.11.dfsg-2+deb11u2 \
+        dirmngr=2.2.40-1.1 \
+        git=1:2.39.2-1.1 \
+        gpg-agent=2.2.40-1.1 \
+        gpg=2.2.40-1.1 \
+        libffi-dev=3.4.4-1 \
+        libffi8=3.4.4-1 \
+        libfreetype6-dev=2.12.1+dfsg-5 \
+        libfreetype6=2.12.1+dfsg-5 \
+        libjpeg62-turbo-dev=1:2.1.5-2 \
+        libjpeg62-turbo=1:2.1.5-2 \
+        libmariadb-dev=1:10.11.3-1 \
+        libmariadb3=1:10.11.3-1 \
+        libnginx-mod-http-lua=1:0.10.23-1 \
+        libpng-dev=1.6.39-2 \
+        libpng16-16=1.6.39-2 \
+        libpq-dev=15.3-0+deb12u1 \
+        libpq5=15.3-0+deb12u1 \
+        libssl-dev=3.0.9-1 \
+        libtiff5-dev=4.5.0-6 \
+        libxml2-dev=2.9.14+dfsg-1.3~deb12u1 \
+        libxml2=2.9.14+dfsg-1.3~deb12u1 \
+        libxslt1-dev=1.1.35-1 \
+        libxslt1.1=1.1.35-1 \
+        libzmq3-dev=4.3.4-6 \
+        libzmq5=4.3.4-6 \
+        nginx=1.22.1-9 \
+        pandoc=2.17.1.1-1.1 \
+        pkg-config=1.8.1-1 \
+        python3-dev=3.11.2-1+b1 \
+        python3-distutils=3.11.2-3 \
+        python3-minimal=3.11.2-1+b1 \
+        zlib1g-dev=1:1.2.13.dfsg-1 \
     \
-    && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
+    && mkdir -p /etc/apt/keyrings \
+    && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key \
+        | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg \
     \
+    && echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" \
+     > /etc/apt/sources.list.d/nodesource.list \
+    \
+    && apt-get update \
     && apt-get install -y --no-install-recommends \
-        nodejs=14.21.3-deb-1nodesource1 \
+        nodejs=20.6.1-1nodesource1 \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     \
     && update-alternatives \
         --install /usr/bin/python python /usr/bin/python3 10 \
     \
-    && pip3 install --no-cache-dir numpy==1.23.2 \
+    && pip3 install --no-cache-dir numpy==1.25.2 \
     && pip3 install --no-cache-dir -r /opt/requirements.txt \
     \
     && apt-get purge -y --auto-remove \
