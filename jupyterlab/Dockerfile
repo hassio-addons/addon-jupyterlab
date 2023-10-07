@@ -48,7 +48,7 @@ RUN \
         libzmq3-dev=4.3.4-6 \
         libzmq5=4.3.4-6 \
         nginx=1.22.1-9 \
-        pandoc=2.17.1.1-1.1 \
+        pandoc=2.17.1.1-2~deb12u1 \
         pkg-config=1.8.1-1 \
         python3-dev=3.11.2-1+b1 \
         python3-distutils=3.11.2-3 \
