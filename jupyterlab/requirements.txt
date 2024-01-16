@@ -9,7 +9,7 @@ jupyterlab_widgets==3.0.9
 jupyterlab==4.0.10
 matplotlib==3.8.2
 mysqlclient==2.2.1
-nbconvert==7.14.1
+nbconvert==7.14.2
 numpy==1.26.3
 pandas-datareader==0.10.0
 pandas==2.1.4
