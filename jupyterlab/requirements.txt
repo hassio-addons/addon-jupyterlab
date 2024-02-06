@@ -10,7 +10,7 @@ jupyterlab==4.1.0
 matplotlib==3.8.2
 mysqlclient==2.2.3
 nbconvert==7.15.0
-numpy==1.26.3
+numpy==1.26.4
 pandas-datareader==0.10.0
 pandas==2.2.0
 psycopg2==2.9.9
