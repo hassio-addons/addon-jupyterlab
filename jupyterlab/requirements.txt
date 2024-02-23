@@ -12,7 +12,7 @@ mysqlclient==2.2.4
 nbconvert==7.16.1
 numpy==1.26.4
 pandas-datareader==0.10.0
-pandas==2.2.0
+pandas==2.2.1
 psycopg2==2.9.9
 python-dateutil==2.8.2
 scrapy==2.11.1
