@@ -37,8 +37,8 @@ RUN \
         libnginx-mod-http-lua=1:0.10.23-1 \
         libpng-dev=1.6.39-2 \
         libpng16-16=1.6.39-2 \
-        libpq-dev=15.5-0+deb12u1 \
-        libpq5=15.5-0+deb12u1 \
+        libpq-dev=15.7-0+deb12u1 \
+        libpq5=15.7-0+deb12u1 \
         libssl-dev=3.0.11-1~deb12u2 \
         libtiff5-dev=4.5.0-6+deb12u1 \
         libxml2-dev=2.9.14+dfsg-1.3~deb12u1 \
