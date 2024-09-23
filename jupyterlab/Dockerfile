@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.4.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.5.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -23,7 +23,7 @@ RUN \
     && apt-get install -y --no-install-recommends \
         build-essential=12.9 \
         dirmngr=2.2.40-1.1 \
-        git=1:2.39.2-1.1 \
+        git=1:2.39.5-0+deb12u1 \
         gpg-agent=2.2.40-1.1 \
         gpg=2.2.40-1.1 \
         libffi-dev=3.4.4-1 \
@@ -37,9 +37,9 @@ RUN \
         libnginx-mod-http-lua=1:0.10.23-1 \
         libpng-dev=1.6.39-2 \
         libpng16-16=1.6.39-2 \
-        libpq-dev=15.7-0+deb12u1 \
-        libpq5=15.7-0+deb12u1 \
-        libssl-dev=3.0.13-1~deb12u1 \
+        libpq-dev=15.8-0+deb12u1 \
+        libpq5=15.8-0+deb12u1 \
+        libssl-dev=3.0.14-1~deb12u2 \
         libtiff5-dev=4.5.0-6+deb12u1 \
         libxml2-dev=2.9.14+dfsg-1.3~deb12u1 \
         libxml2=2.9.14+dfsg-1.3~deb12u1 \
