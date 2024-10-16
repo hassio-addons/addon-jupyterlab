@@ -13,7 +13,7 @@ nbconvert==7.16.4
 numpy==2.1.2
 pandas-datareader==0.10.0
 pandas==2.2.3
-psycopg2==2.9.9
+psycopg2==2.9.10
 python-dateutil==2.9.0.post0
 scrapy==2.11.2
 seaborn==0.13.2
