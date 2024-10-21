@@ -8,7 +8,7 @@ jupyter_bokeh==4.0.5
 jupyterlab_widgets==3.0.13
 jupyterlab==4.2.5
 matplotlib==3.9.2
-mysqlclient==2.2.4
+mysqlclient==2.2.5
 nbconvert==7.16.4
 numpy==2.1.2
 pandas-datareader==0.10.0
