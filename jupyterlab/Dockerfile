@@ -23,7 +23,7 @@ RUN \
     && apt-get install -y --no-install-recommends \
         build-essential=12.9 \
         dirmngr=2.2.40-1.1 \
-        git=1:2.39.5-0+deb12u1 \
+        git=1:2.39.5-0+deb12u2 \
         gpg-agent=2.2.40-1.1 \
         gpg=2.2.40-1.1 \
         libffi-dev=3.4.4-1 \
