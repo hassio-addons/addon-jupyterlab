@@ -6,8 +6,9 @@
   "commitMessagePrefix": "⬆️",
   "commitMessageTopic": "{{depName}}",
   "ignoreDeps": ["nodejs"],
-  "regexManagers": [
+  "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": ["/Dockerfile$", "/build.yaml$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
@@ -17,6 +18,7 @@
       "datasourceTemplate": "docker"
     },
     {
+      "customType": "regex",
       "fileMatch": ["/Dockerfile$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
@@ -55,14 +57,14 @@
     {
       "groupName": "Python",
       "matchDatasources": ["repology"],
-      "matchDepPatterns": ["^debian_*/python3.*"],
-      "automerge": true
+      "automerge": true,
+      "matchDepNames": ["/^debian_*/python3.*/"]
     },
     {
       "groupName": "MariaDB",
       "matchDatasources": ["repology"],
-      "matchDepPatterns": ["^debian_*/libmariadb.*"],
-      "automerge": true
+      "automerge": true,
+      "matchDepNames": ["/^debian_*/libmariadb.*/"]
     }
   ]
 }
