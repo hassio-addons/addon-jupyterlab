@@ -43,8 +43,8 @@ RUN \
         libtiff5-dev=4.5.0-6+deb12u1 \
         libxml2-dev=2.9.14+dfsg-1.3~deb12u1 \
         libxml2=2.9.14+dfsg-1.3~deb12u1 \
-        libxslt1-dev=1.1.35-1 \
-        libxslt1.1=1.1.35-1 \
+        libxslt1-dev=1.1.35-1+deb12u1 \
+        libxslt1.1=1.1.35-1+deb12u1 \
         libzmq3-dev=4.3.4-6 \
         libzmq5=4.3.4-6 \
         nginx=1.22.1-9+deb12u2 \
