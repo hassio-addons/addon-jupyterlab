@@ -42,7 +42,7 @@ RUN \
         libssl-dev=3.0.16-1~deb12u1 \
         libtiff5-dev=4.5.0-6+deb12u1 \
         libxml2-dev=2.9.14+dfsg-1.3~deb12u2 \
-        libxml2=2.9.14+dfsg-1.3~deb12u2 \
+        libxml2=2.9.14+dfsg-1.3~deb12u4 \
         libxslt1-dev=1.1.35-1+deb12u1 \
         libxslt1.1=1.1.35-1+deb12u1 \
         libzmq3-dev=4.3.4-6 \
