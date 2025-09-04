@@ -1,4 +1,4 @@
-beautifulsoup4==4.13.4
+beautifulsoup4==4.13.5
 bokeh==3.7.3
 geopy==2.4.1
 HASS-data-detective==3.0
