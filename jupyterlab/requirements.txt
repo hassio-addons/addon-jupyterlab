@@ -17,4 +17,4 @@ psycopg2==2.9.10
 python-dateutil==2.9.0.post0
 scrapy==2.13.3
 seaborn==0.13.2
-SQLAlchemy==2.0.41
+SQLAlchemy==2.0.43
