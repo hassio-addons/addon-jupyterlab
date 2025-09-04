@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.8.3
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:8.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -21,57 +21,57 @@ RUN \
     \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
-        build-essential=12.9 \
-        dirmngr=2.2.40-1.1 \
-        git=1:2.39.5-0+deb12u2 \
-        gpg-agent=2.2.40-1.1 \
-        gpg=2.2.40-1.1 \
-        libffi-dev=3.4.4-1 \
-        libffi8=3.4.4-1 \
-        libfreetype6-dev=2.12.1+dfsg-5+deb12u4 \
-        libfreetype6=2.12.1+dfsg-5+deb12u4 \
-        libjpeg62-turbo-dev=1:2.1.5-2 \
-        libjpeg62-turbo=1:2.1.5-2 \
-        libmariadb-dev=1:10.11.11-0+deb12u1 \
-        libmariadb3=1:10.11.11-0+deb12u1 \
-        libnginx-mod-http-lua=1:0.10.23-1 \
-        libpng-dev=1.6.39-2 \
-        libpng16-16=1.6.39-2 \
-        libpq-dev=15.10-0+deb12u1 \
-        libpq5=15.10-0+deb12u1 \
-        libssl-dev=3.0.16-1~deb12u1 \
-        libtiff5-dev=4.5.0-6+deb12u1 \
-        libxml2-dev=2.9.14+dfsg-1.3~deb12u2 \
-        libxml2=2.9.14+dfsg-1.3~deb12u2 \
-        libxslt1-dev=1.1.35-1+deb12u1 \
-        libxslt1.1=1.1.35-1+deb12u1 \
-        libzmq3-dev=4.3.4-6 \
-        libzmq5=4.3.4-6 \
-        nginx=1.22.1-9+deb12u2 \
-        pandoc=2.17.1.1-2~deb12u1 \
-        pkg-config=1.8.1-1 \
-        python3-dev=3.11.2-1+b1 \
-        python3-distutils=3.11.2-3 \
-        python3-minimal=3.11.2-1+b1 \
-        zlib1g-dev=1:1.2.13.dfsg-1 \
+        build-essential=12.12 \
+        dirmngr=2.4.7-21+b3 \
+        git=1:2.47.2-0.2 \
+        gpg-agent=2.4.7-21+b3 \
+        gpg=2.4.7-21+b3 \
+        libffi-dev=3.4.8-2 \
+        libffi8=3.4.8-2 \
+        libfreetype-dev=2.13.3+dfsg-1 \
+        libfreetype6=2.13.3+dfsg-1 \
+        libjpeg62-turbo-dev=1:2.1.5-4 \
+        libjpeg62-turbo=1:2.1.5-4 \
+        libmariadb-dev=1:11.8.2-1 \
+        libmariadb3=1:11.8.2-1 \
+        libnginx-mod-http-lua=1:0.10.28-2 \
+        libpng-dev=1.6.48-1 \
+        libpng16-16t64=1.6.48-1 \
+        libpq-dev=17.5-1 \
+        libpq5=17.5-1 \
+        libssl-dev=3.5.1-1 \
+        libtiff-dev=4.7.0-3 \
+        libtiff6=4.7.0-3 \
+        libxml2-dev=2.12.7+dfsg+really2.9.14-2.1+deb13u1 \
+        libxml2=2.12.7+dfsg+really2.9.14-2.1+deb13u1 \
+        libxslt1-dev=1.1.35-1.2+deb13u1 \
+        libxslt1.1=1.1.35-1.2+deb13u1 \
+        libzmq3-dev=4.3.5-1+b3 \
+        libzmq5=4.3.5-1+b3 \
+        nginx=1.26.3-3 \
+        pandoc=3.1.11.1+ds-2 \
+        pkg-config=1.8.1-4 \
+        python3-dev=3.13.5-1 \
+        python3-minimal=3.13.5-1 \
+        zlib1g-dev=1:1.3.dfsg+really1.3.1-1+b1 \
     \
     && mkdir -p /etc/apt/keyrings \
     && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key \
         | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg \
     \
-    && echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" \
+    && echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" \
      > /etc/apt/sources.list.d/nodesource.list \
     \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
-        nodejs=20.6.1-1nodesource1 \
+        nodejs=22.19.0-1nodesource1 \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     \
     && update-alternatives \
-        --install /usr/bin/python python /usr/bin/python3 10 \
+        --install /usr/bin/python python /usr/bin/python3 13 \
     \
-    && pip3 install --no-cache-dir numpy==1.25.2 \
+    && pip3 install --no-cache-dir numpy==2.3.2 \
     && pip3 install --no-cache-dir -r /opt/requirements.txt \
     \
     && apt-get purge -y --auto-remove \
@@ -80,13 +80,13 @@ RUN \
         gpg \
         gpg-agent \
         libffi-dev \
-        libfreetype6-dev \
+        libfreetype-dev \
         libjpeg62-turbo-dev \
         libmariadb-dev \
         libpng-dev \
         libpq-dev \
         libssl-dev \
-        libtiff5-dev \
+        libtiff-dev \
         libxml2-dev \
         libxslt1-dev \
         libzmq3-dev \
