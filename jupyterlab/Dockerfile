@@ -33,7 +33,7 @@ RUN \
         libjpeg62-turbo-dev=1:2.1.5-4 \
         libjpeg62-turbo=1:2.1.5-4 \
         libmariadb-dev=1:11.8.2-1 \
-        libmariadb3=1:11.8.2-1 \
+        libmariadb3=1:11.8.3-0+deb13u1 \
         libnginx-mod-http-lua=1:0.10.28-2 \
         libpng-dev=1.6.48-1 \
         libpng16-16t64=1.6.48-1 \
