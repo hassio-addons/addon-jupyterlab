@@ -48,7 +48,7 @@ RUN \
         libxslt1.1=1.1.35-1.2+deb13u1 \
         libzmq3-dev=4.3.5-1+b3 \
         libzmq5=4.3.5-1+b3 \
-        nginx=1.26.3-3 \
+        nginx=1.26.3-3+deb13u1 \
         pandoc=3.1.11.1+ds-2 \
         pkg-config=1.8.1-4 \
         python3-dev=3.13.5-1 \
