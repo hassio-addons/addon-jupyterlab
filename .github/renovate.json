@@ -2,14 +2,22 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "rebaseWhen": "behind-base-branch",
   "dependencyDashboard": true,
-  "labels": ["dependencies", "no-stale"],
+  "labels": [
+    "dependencies",
+    "no-stale"
+  ],
   "commitMessagePrefix": "⬆️",
   "commitMessageTopic": "{{depName}}",
-  "ignoreDeps": ["nodejs"],
+  "ignoreDeps": [
+    "nodejs"
+  ],
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["/Dockerfile$", "/build.yaml$"],
+      "managerFilePatterns": [
+        "//Dockerfile$/",
+        "//build.yaml$/"
+      ],
       "matchStringsStrategy": "any",
       "matchStrings": [
         "ARG BUILD_FROM=(?<depName>.*?):(?<currentValue>.*?)\\s+",
@@ -19,7 +27,9 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["/Dockerfile$"],
+      "managerFilePatterns": [
+        "//Dockerfile$/"
+      ],
       "matchStringsStrategy": "any",
       "matchStrings": [
         "\\s\\s(?<package>[a-z0-9][a-z0-9-]+)=(?<currentValue>[a-z0-9-:_+~.]+)\\s+"
@@ -31,40 +41,66 @@
   ],
   "packageRules": [
     {
-      "matchDatasources": ["repology"],
+      "matchDatasources": [
+        "repology"
+      ],
       "automerge": true
     },
     {
       "groupName": "Add-on base image",
-      "matchDatasources": ["docker"]
+      "matchDatasources": [
+        "docker"
+      ]
     },
     {
       "groupName": "Add-on base image",
-      "matchDatasources": ["docker"],
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "automerge": true
     },
     {
-      "matchManagers": ["pip_requirements"],
-      "addLabels": ["python"],
+      "matchManagers": [
+        "pip_requirements"
+      ],
+      "addLabels": [
+        "python"
+      ],
       "rangeStrategy": "pin"
     },
     {
-      "matchManagers": ["pip_requirements"],
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchManagers": [
+        "pip_requirements"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "automerge": true
     },
     {
       "groupName": "Python",
-      "matchDatasources": ["repology"],
+      "matchDatasources": [
+        "repology"
+      ],
       "automerge": true,
-      "matchDepNames": ["/^debian_*/python3.*/"]
+      "matchDepNames": [
+        "/^debian_*/python3.*/"
+      ]
     },
     {
       "groupName": "MariaDB",
-      "matchDatasources": ["repology"],
+      "matchDatasources": [
+        "repology"
+      ],
       "automerge": true,
-      "matchDepNames": ["/^debian_*/libmariadb.*/"]
+      "matchDepNames": [
+        "/^debian_*/libmariadb.*/"
+      ]
     }
   ]
 }
