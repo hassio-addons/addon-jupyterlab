@@ -11,7 +11,7 @@ matplotlib==3.10.9
 mysqlclient==2.2.8
 nbconvert==7.17.1
 numpy==2.4.4
-pandas-datareader==0.10.0
+pandas-datareader==0.11.1
 pandas==2.3.3
 psycopg2==2.9.12
 python-dateutil==2.9.0.post0
