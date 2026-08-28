@@ -64,7 +64,7 @@ RUN \
     \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
-        nodejs=22.19.0-1nodesource1 \
+        nodejs=22.23.2-1nodesource1 \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     \
