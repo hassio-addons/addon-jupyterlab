@@ -6,7 +6,6 @@
   "labels": ["dependencies", "no-stale"],
   "commitMessagePrefix": "⬆️",
   "commitMessageTopic": "{{depName}}",
-  "ignoreDeps": ["nodejs"],
   "customManagers": [
     {
       "customType": "regex",
@@ -37,6 +36,15 @@
         "https://deb.debian.org/debian?suite=trixie&components=main&binaryArch=amd64",
         "https://deb.debian.org/debian?suite=trixie-updates&components=main&binaryArch=amd64",
         "https://deb.debian.org/debian-security?suite=trixie-security&components=main&binaryArch=amd64"
+      ],
+      "automerge": true
+    },
+    {
+      "description": "nodejs is pinned from the NodeSource repository, not Debian",
+      "matchDatasources": ["deb"],
+      "matchDepNames": ["nodejs"],
+      "registryUrls": [
+        "https://deb.nodesource.com/node_22.x?suite=nodistro&components=main&binaryArch=amd64"
       ],
       "automerge": true
     },
