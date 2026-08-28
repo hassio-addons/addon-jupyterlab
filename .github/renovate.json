@@ -50,6 +50,12 @@
       "rangeStrategy": "pin"
     },
     {
+      "description": "3.3+ requires Python <3.13, the base image ships Python 3.13",
+      "matchManagers": ["pip_requirements"],
+      "matchPackageNames": ["HASS-data-detective"],
+      "allowedVersions": "<3.3"
+    },
+    {
       "matchManagers": ["pip_requirements"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
