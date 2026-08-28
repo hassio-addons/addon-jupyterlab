@@ -4,8 +4,8 @@ When contributing to this repository, please first discuss the change you wish
 to make via issue, email, or any other method with the owners of this repository
 before making a change.
 
-Please note we have a code of conduct, please follow it in all your interactions
-with the project.
+Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow
+it in all your interactions with the project.
 
 ## Issues and feature requests
 
@@ -25,5 +25,5 @@ Even better: You could submit a pull request with a fix / new feature!
    developers, or if you do not have permission to do that, you may request
    the second reviewer to merge it for you.
 
-[github]: https://github.com/hassio-addons/addon-jupyterlab/issues
-[prs]: https://github.com/hassio-addons/addon-jupyterlab/pulls
+[github]: https://github.com/hassio-addons/app-jupyterlab/issues
+[prs]: https://github.com/hassio-addons/app-jupyterlab/pulls

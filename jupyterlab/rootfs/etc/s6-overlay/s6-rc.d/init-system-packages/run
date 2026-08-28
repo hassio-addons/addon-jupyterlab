@@ -1,7 +1,7 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Community Add-on: JupyterLab
+# Home Assistant Community App: JupyterLab
 # Install user configured requested packages & commands
 # ==============================================================================
 if bashio::config.has_value 'system_packages'; then

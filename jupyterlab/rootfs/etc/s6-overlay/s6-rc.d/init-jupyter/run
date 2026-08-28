@@ -1,7 +1,7 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Community Add-on: JupyterLab
+# Home Assistant Community App: JupyterLab
 # Configure JupterLabs
 # ==============================================================================
 if ! bashio::fs.directory_exists '/data/user-settings'; then
@@ -25,7 +25,7 @@ fi
 ln -s /data/local /root/.local
 
 bashio::var.json \
-    entry "$(bashio::addon.ingress_entry)" \
+    entry "$(bashio::app.ingress_entry)" \
     token "$(bashio::config 'github_access_token')" \
     | tempio \
         -template /etc/jupyter/jupyter_server_config.gtpl \

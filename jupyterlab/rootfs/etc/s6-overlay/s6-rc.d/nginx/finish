@@ -1,7 +1,7 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Community Add-on: JupyterLab
+# Home Assistant Community App: JupyterLab
 # Take down the S6 supervision tree when NGINX fails
 # ==============================================================================
 declare exit_code_container
