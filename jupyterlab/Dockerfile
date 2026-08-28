@@ -22,33 +22,33 @@ RUN \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
         build-essential=12.12 \
-        dirmngr=2.4.7-21+b3 \
+        dirmngr=2.4.7-21+deb13u1+b4 \
         git=1:2.47.3-0+deb13u1 \
-        gpg-agent=2.4.7-21+b3 \
-        gpg=2.4.7-21+b3 \
+        gpg-agent=2.4.7-21+deb13u1+b4 \
+        gpg=2.4.7-21+deb13u1+b4 \
         libffi-dev=3.4.8-2 \
         libffi8=3.4.8-2 \
-        libfreetype-dev=2.13.3+dfsg-1 \
-        libfreetype6=2.13.3+dfsg-1 \
+        libfreetype-dev=2.13.3+dfsg-1+deb13u1 \
+        libfreetype6=2.13.3+dfsg-1+deb13u1 \
         libjpeg62-turbo-dev=1:2.1.5-4 \
         libjpeg62-turbo=1:2.1.5-4 \
-        libmariadb-dev=1:11.8.3-0+deb13u1 \
-        libmariadb3=1:11.8.3-0+deb13u1 \
+        libmariadb-dev=1:11.8.6-0+deb13u1 \
+        libmariadb3=1:11.8.6-0+deb13u1 \
         libnginx-mod-http-lua=1:0.10.28-2 \
-        libpng-dev=1.6.48-1 \
-        libpng16-16t64=1.6.48-1 \
-        libpq-dev=17.6-0+deb13u1 \
-        libpq5=17.6-0+deb13u1 \
-        libssl-dev=3.5.4-1~deb13u1 \
-        libtiff-dev=4.7.0-3+deb13u1 \
-        libtiff6=4.7.0-3+deb13u1 \
-        libxml2-dev=2.12.7+dfsg+really2.9.14-2.1+deb13u2 \
-        libxml2=2.12.7+dfsg+really2.9.14-2.1+deb13u2 \
-        libxslt1-dev=1.1.35-1.2+deb13u2 \
-        libxslt1.1=1.1.35-1.2+deb13u2 \
+        libpng-dev=1.6.48-1+deb13u5 \
+        libpng16-16t64=1.6.48-1+deb13u5 \
+        libpq-dev=17.11-0+deb13u1 \
+        libpq5=17.11-0+deb13u1 \
+        libssl-dev=3.5.7-1~deb13u2 \
+        libtiff-dev=4.7.0-3+deb13u3 \
+        libtiff6=4.7.0-3+deb13u3 \
+        libxml2-dev=2.12.7+dfsg+really2.9.14-2.1+deb13u3 \
+        libxml2=2.12.7+dfsg+really2.9.14-2.1+deb13u3 \
+        libxslt1-dev=1.1.35-1.2+deb13u3 \
+        libxslt1.1=1.1.35-1.2+deb13u3 \
         libzmq3-dev=4.3.5-1+b3 \
         libzmq5=4.3.5-1+b3 \
-        nginx=1.26.3-3+deb13u2 \
+        nginx=1.26.3-3+deb13u7 \
         pandoc=3.1.11.1+ds-2 \
         pkg-config=1.8.1-4 \
         python3-dev=3.13.5-1 \
@@ -71,7 +71,7 @@ RUN \
     && update-alternatives \
         --install /usr/bin/python python /usr/bin/python3 13 \
     \
-    && pip3 install --no-cache-dir numpy==2.3.2 \
+    && pip3 install --no-cache-dir numpy==2.4.4 \
     && pip3 install --no-cache-dir -r /opt/requirements.txt \
     \
     && apt-get purge -y --auto-remove \
