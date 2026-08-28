@@ -1,7 +1,7 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Community Add-on: JupyterLab
+# Home Assistant Community App: JupyterLab
 # Configure JupterLabs
 # ==============================================================================
 if ! bashio::fs.directory_exists '/data/user-settings'; then

@@ -1,7 +1,7 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Community Add-on: JupyterLab
+# Home Assistant Community App: JupyterLab
 # Ensures the JupyterLab notebooks directory exists
 # ==============================================================================
 readonly BOOKS="/config/notebooks/"
